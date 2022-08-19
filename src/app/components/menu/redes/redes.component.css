@@ -1,0 +1,17 @@
+/*iconos de navbar */
+
+.fa-facebook:hover{
+    color: blue;
+}
+.fa-twitter:hover{
+    color: lightblue;
+}
+.fa-instagram:hover{
+    color: violet;
+}
+.fa-linkedin:hover{
+    color: rgb(99, 154, 190);
+}
+.fa-github:hover{
+    color: rgb(209, 164, 123);
+}

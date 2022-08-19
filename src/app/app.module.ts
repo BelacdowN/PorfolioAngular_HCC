@@ -17,7 +17,9 @@ import { LogoapComponent } from './components/menu/logoap/logoap.component';
 import { RedesComponent } from './components/menu/redes/redes.component';
 import { LoginComponent } from './components/menu/login/login.component';
 import { LogoutComponent } from './components/menu/logout/logout.component';
-import { ModalComponent } from './components/menu/login/modal/modal.component';
+import { ModalLoginComponent } from './components/menu/login/modal-login/modal-login.component';
+import { BannerComponent } from './components/sobremi/sobremicomp/banner/banner.component';
+import { ProfileimgComponent } from './components/sobremi/sobremicomp/profileimg/profileimg.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +38,9 @@ import { ModalComponent } from './components/menu/login/modal/modal.component';
     RedesComponent,
     LoginComponent,
     LogoutComponent,
-    ModalComponent
+    ModalLoginComponent,
+    BannerComponent,
+    ProfileimgComponent
   ],
   imports: [
     BrowserModule,
