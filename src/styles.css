@@ -1,1 +1,31 @@
 /* You can add global styles to this file, and also import other style files */
+/* configuración del body*/
+body{    
+    background-image:
+            linear-gradient(
+            90deg,
+            rgba(0, 0, 0, 0.932),
+            rgba(255, 255, 255, 0),
+            rgb(0, 0, 0, 0.932)
+          ), url(/assets/img/fondoPaisaje.jpg);
+    background-size:cover;
+    background-repeat: no-repeat;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    margin: 1rem;
+}
+
+/* boton login modal */
+.btn.btnLogin{
+    background-color: rgba(32, 107, 45, 0.795);
+}
+
+/* colores de bonotes de edición */
+.btn.btn-close-white:hover,
+.btn.btn-close-white{
+    color: black;
+}
+
+/* estilo de secciones */
+.seccion{
+    background-color: rgba(15, 53, 21, 0.733);
+   }
