@@ -11,8 +11,6 @@ import { HabilidadesComponent } from './components/habilidades/habilidades.compo
 import { ProyectosComponent } from './components/proyectos/proyectos.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { ModalesComponent } from './components/modales/modales.component';
-import { IntroComponent } from './components/intro/intro.component';
-import { EdicionComponent } from './components/edicion/edicion.component';
 import { LogoapComponent } from './components/menu/logoap/logoap.component';
 import { RedesComponent } from './components/menu/redes/redes.component';
 import { LoginComponent } from './components/menu/login/login.component';
@@ -32,8 +30,6 @@ import { ProfileimgComponent } from './components/sobremi/sobremicomp/profileimg
     ProyectosComponent,
     FooterComponent,
     ModalesComponent,
-    IntroComponent,
-    EdicionComponent,
     LogoapComponent,
     RedesComponent,
     LoginComponent,
