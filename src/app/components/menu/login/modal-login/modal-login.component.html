@@ -7,23 +7,23 @@
                   <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <form name="loginForm"> 
+                    <form #f="ngForm" (ngSubmit)="onLogin()" novalidate name="loginForm"> 
                         <!-- formulario de login-->
                         <div class="mb-3">
-                          <label for="loginEmail" class="form-label">Email</label>
-                          <input type="email" class="form-control" id="loginEmail" aria-describedby="emailHelp">
-                          <div id="emailHelp" class="form-text">Ingrese su correo electrónico</div>
+                          <label for="nombreUsuario" class="form-label">Usuario</label>
+                          <input type="text" class="form-control" id="nombreUsuario" name="nombreUsuario" aria-describedby="Usuario" required [(ngModel)]="nombreUsuario">
+                          <div id="emailHelp" class="form-text">Ingrese su usuario</div>
                         </div>
                         <div class="mb-3">
-                          <label for="loginPassword" class="form-label">Contraseña</label>
-                          <input type="password" class="form-control" id="loginPassword">
+                          <label for="password" class="form-label">Contraseña</label>
+                          <input type="password" class="form-control" id="password" name="password" required [(ngModel)]="password">
                           <div id="passwordHelp" class="form-text">Ingrese su contraseña</div>
                         </div>
-                    </form>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btnLogin">Iniciar Sesión</button>
-                </div>
+                        <div class="modal-footer">
+                          <button type="submit" class="btn btnLogin" data-bs-dismiss="modal">Iniciar Sesión</button>
+                        </div>
+                      </form>
+                  </div>
               </div>
             </div>
           </div>

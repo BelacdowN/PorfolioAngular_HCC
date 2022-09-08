@@ -1,24 +1,26 @@
-<section id="sobreMi" class="sobreMi text-white mt-4">
-    <div class="seccion container-fluid rounded shadow-sm mb-5 bg-body-transparent p-0">
+<section id="sobreMi" class="sobreMi text-white mt-4">  
+<!-- boton mostrar ocultar
+  <button type="button" class="btn btn-primary" (click)="mostrar=!mostrar">mostrar/ocultar</button> -->
+  <div class="seccion container-fluid rounded shadow-sm mb-5 bg-body-transparent p-0">
       <app-banner></app-banner>
        <!-- Button trigger modal -->
-      <button type="button"  data-bs-toggle="modal" data-bs-target="#bannerModal" class="btn btn-close-white editBanner"><i class="fa-solid fa-pencil"></i></button> 
+      <button type="button" *ngIf="isLogged" data-bs-toggle="modal" data-bs-target="#bannerModal" class="btn btn-close-white editBanner"><i class="fa-solid fa-pencil"></i></button> 
       <div class="row p-3">
       <div class="col-3">
         <app-profileimg></app-profileimg>
        <!-- Button trigger modal -->  
-        <button type="button"  data-bs-toggle="modal" data-bs-target="#profileModal" class="btn btn-close-white"><i class="fa-solid fa-pencil"></i></button>
+        <button type="button" *ngIf="isLogged" data-bs-toggle="modal" data-bs-target="#profileModal" class="btn btn-close-white" ><i class="fa-solid fa-pencil"></i></button>
         <br>
-        <h4 class="nombrePerfil">Heber Caleb Cuevas</h4>
-        <h5 class="tituloPerfil">Desarrollador Web Full Stack Jr</h5>
+        <h4 class="nombrePerfil">{{persona.nombre}} {{persona.apellido}}</h4>
+        <h5 class="tituloPerfil">{{persona.titulo}}</h5>
       </div>
       <div class="col-8 text-md-start">
-        <h4 class="sobreMiPerfil">Buenas! Soy Heber Cuevas y vivo en Río Primero, provincia de Córdoba. Tengo experiencia en trabajos de administración en varias empresas, pero actualmente busco adentrarme en la rama del desarrollo web para crecer y progresar en mi carrera profesional. Aparte de esto soy músico, toco la guitarra y me gustan las motos.</h4>
+        <h4 class="sobreMiPerfil">{{persona.sobreMi}}</h4>
       </div>
       <div class="col-1 p-0">
         <!-- Button trigger modal -->  
-        <button type="button"  data-bs-toggle="modal" data-bs-target="#sobreMiModal" class="btn btn-close-white"><i class="fa-solid fa-pencil"></i></button> <br>
-        <button type="submit" class="btn btn-close-white"><i class="fa-solid fa-trash-can"></i></button>
+        <button type="button" *ngIf="isLogged" data-bs-toggle="modal" data-bs-target="#sobreMiModal" class="btn btn-close-white" ><i class="fa-solid fa-pencil"></i></button> <br>
+        <button type="submit" *ngIf="isLogged" class="btn btn-close-white"><i class="fa-solid fa-trash-can"></i></button>
       </div>
     </div>
   </div>

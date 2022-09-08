@@ -18,6 +18,8 @@ import { LogoutComponent } from './components/menu/logout/logout.component';
 import { ModalLoginComponent } from './components/menu/login/modal-login/modal-login.component';
 import { BannerComponent } from './components/sobremi/sobremicomp/banner/banner.component';
 import { ProfileimgComponent } from './components/sobremi/sobremicomp/profileimg/profileimg.component';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -40,7 +42,9 @@ import { ProfileimgComponent } from './components/sobremi/sobremicomp/profileimg
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
