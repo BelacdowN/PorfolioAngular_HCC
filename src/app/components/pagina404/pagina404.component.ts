@@ -2,11 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { TokenService } from 'src/app/services/token.service';
 
 @Component({
-  selector: 'app-footer',
-  templateUrl: './footer.component.html',
-  styleUrls: ['./footer.component.css']
+  selector: 'app-pagina404',
+  templateUrl: './pagina404.component.html',
+  styleUrls: ['./pagina404.component.css']
 })
-export class FooterComponent implements OnInit {
+export class Pagina404Component implements OnInit {
   isLogged = false;
   constructor(private tokenService: TokenService) { }
 
@@ -15,6 +15,7 @@ export class FooterComponent implements OnInit {
       this.isLogged = true;
     }else{
       this.isLogged = false;
+    }
   }
-  }
+
 }

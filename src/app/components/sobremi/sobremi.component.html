@@ -1,7 +1,7 @@
 <section id="sobreMi" class="sobreMi text-white mt-4">  
 <!-- boton mostrar ocultar
   <button type="button" class="btn btn-primary" (click)="mostrar=!mostrar">mostrar/ocultar</button> -->
-  <div class="seccion container-fluid rounded shadow-sm mb-5 bg-body-transparent p-0">
+  <div class="seccion container-fluid rounded shadow-sm mb-5 bg-body-transparent p-0" [ngClass]="{fondouser : isLogged}">
       <app-banner></app-banner>
        <!-- Button trigger modal -->
       <button type="button" *ngIf="isLogged" data-bs-toggle="modal" data-bs-target="#bannerModal" class="btn btn-close-white editBanner"><i class="fa-solid fa-pencil"></i></button> 

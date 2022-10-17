@@ -1,3 +1,7 @@
 .fa-user:hover{
-    color: rgb(247, 243, 48);
+    color: rgb(235, 165, 15);
+    /* -webkit-transition: all .3s;
+    transition: all .3s;
+    -webkit-transform: rotate(50deg);
+            transform: rotate(50deg); */
 }

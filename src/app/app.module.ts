@@ -20,6 +20,9 @@ import { BannerComponent } from './components/sobremi/sobremicomp/banner/banner.
 import { ProfileimgComponent } from './components/sobremi/sobremicomp/profileimg/profileimg.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { interceptorProvider } from './services/interceptor-service';
+import { Pagina404Component } from './components/pagina404/pagina404.component';
+import { IndexComponent } from './components/index/index.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +41,9 @@ import { FormsModule } from '@angular/forms';
     LogoutComponent,
     ModalLoginComponent,
     BannerComponent,
-    ProfileimgComponent
+    ProfileimgComponent,
+    Pagina404Component,
+    IndexComponent
   ],
   imports: [
     BrowserModule,
@@ -46,7 +51,9 @@ import { FormsModule } from '@angular/forms';
     HttpClientModule,
     FormsModule
   ],
-  providers: [],
+  providers: [
+    interceptorProvider
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

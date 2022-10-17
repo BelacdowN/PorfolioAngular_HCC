@@ -1,0 +1,130 @@
+{
+    "personas": [
+      {
+        "id": 1,
+        "banner": "assets/img/FondoPC.png",
+        "profileImage": "assets/img/profile.jpg",
+        "nombrePerfil": "Heber Caleb Cuevas",
+        "tituloPerfil": "Desarrollador Web Full Stack Jr",
+        "sobreMiPerfil": "Buenas! Soy Heber Cuevas y vivo en Río Primero, provincia de Córdoba. Tengo experiencia en trabajos de administración en varias empresas, pero actualmente busco adentrarme en la rama del desarrollo web para crecer y progresar en mi carrera profesional. Aparte de esto soy músico, toco la guitarra y me gustan las motos."
+      }
+    ],
+
+    "experiencias": [
+        {
+          "id": 1,
+          "logoEmpresa": "assets/img/LogoTejamax.png",
+          "urlEmpresa": "urlTejamax",
+          "puesto": "Administración",
+          "inicio": "02-02-2013",
+          "fin": "02-01.2022",
+          "descipcion": "Auxiliar Administrativo en TEJAMAX SA orientado al sector mantenimiento, trabajos con normas ISO 9000 y 9001 en SGC, experiencia en cotizaciones de compra, atención a clientes y proveedores, controles de producción y stock, programación de mantenimientos preventivos, manejo de indicadores de mantenimiento y consumos, manejo de Office, manejo de dinero y rendiciones de caja, conducción de vehículos livianos."
+        },
+        {
+            "id": 2,
+            "logoEmpresa": "assets/img/LogoRaful.png",
+            "urlEmpresa": "urlRaful",
+            "puesto": "Administración",
+            "inicio": "05-10-2011",
+            "fin": "15-01-2013",
+            "descipcion": "Administrativo en PREMOLDEADOS RAFUL., con experiencia en cotizaciones de venta, atención a clientes, controles de producción y stock, manejo de Office."
+          },
+          {
+            "id": 3,
+            "logoEmpresa": "assets/img/LogoShell.png",
+            "urlEmpresa": "urlShell",
+            "puesto": "Vendedor de playa",
+            "inicio": "01-03-2010",
+            "fin": "20-10-2011",
+            "descipcion": "Vendedor de playa en ESTACIÓN DE SERVICIO SHELL Río Primero, con experiencia en manejo de dinero, rendición de caja, manejo de PC, atención a clientes."
+          }
+      ],
+
+      "educaciones": [
+        {
+          "id": 1,
+          "logoEstudio": "assets/img/LogoFCEFyN.png",
+          "urlEstudio": "urlFCEFyN",
+          "estudio": "TECNICO MECANICO ELECTRICISTA UNIVERSITARIO (pasivo)",
+          "inicio": "03-03-2009",
+          "fin": "15-02-2010",
+          "descipcion": "Facultad de Ciencias Exactas, Físicas y Naturales de la Universidad Nacional de Córdoba, la Carrera de TECNICO MECANICO ELECTRICISTA UNIVERSITARIO, cursado 1er año."
+        },
+        {
+            "id": 2,
+            "logoEstudio": "assets/img/LogoArgPro.png",
+            "urlEstudio": "urlArgPro",
+            "estudio": "Desarrollador Web FullStack Junior",
+            "inicio": "28-06-2022",
+            "fin": "13-01-2023",
+            "descipcion": "Desarrollador Web Full Stack Junior (HTML · CSS · Boopstrap · Fontawesome · JSON · Angular · Java · JavaScript · Bases de datos · DevOps)"
+          },
+        {
+            "id": 3,
+            "logoEstudio": "assets/img/LogoInglesDesa.png",
+            "urlEstudio": "urlInglesDesa",
+            "estudio": "Curso de Inglés Para Desarrolladores de Software",
+            "inicio": "02-04-2022",
+            "fin": "06-06-2022",
+            "descipcion": "Curso de Inglés orientado para desarrolladores de software, disertado por Naila Zach como complemento de la 2da etapa del curso Argentina Programa"
+          },
+        {
+            "id": 4,
+            "logoEstudio": "assets/img/LogoOffice.png",
+            "urlEstudio": "urlOffice",
+            "estudio": "Operador Informático de Aplicaciones Office",
+            "inicio": "10-06-2008",
+            "fin": "15-09-2008",
+            "descipcion": "Operador Informático de Aplicaciones Office Word Excel Powerpoint n° Orden 11058"
+          },
+        {
+            "id": 5,
+            "logoEstudio": "assets/img/LogoGinastera.png",
+            "urlEstudio": "urlGinastera",
+            "estudio": "Ciclo Artístico Vocacional en Guitarra",
+            "inicio": "01-04-2017",
+            "fin": "30-11-2017",
+            "descipcion": "1er año de Ciclo Artístico Vocacional en Guitarra en Conservatorio “Alberto E. Ginastera”"
+          }
+    ],
+
+    "habilidades": [
+        {
+          "id": 1,
+          "habilidad": "HTML",
+          "porcentaje": "75"
+        },
+        {
+            "id": 2,
+            "habilidad": "CSS",
+            "porcentaje": "60"
+          },
+          {
+            "id": 3,
+            "habilidad": "JAVA",
+            "porcentaje": "50"
+          },
+          {
+            "id": 4,
+            "habilidad": "JavaScript",
+            "porcentaje": "35"
+          },
+          {
+            "id": 5,
+            "habilidad": "Boopstrap",
+            "porcentaje": "90"
+          }
+      ],
+      
+      "proyectos": [
+        {
+            "id": 1,
+            "logoProyecto": "assets/img/LogoAPLogo.png",
+            "urlProyecto": "urlAPLogo",
+            "tituloProyecto": "Armado de Login",
+            "inicio": "01-08-2022",
+            "fin": "13-01-2023",
+            "descipcion": "Armado de login con campos y detalles sugeridos en trabajo práctico Argentina Programa"
+        }
+      ]
+  }
