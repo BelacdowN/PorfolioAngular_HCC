@@ -23,6 +23,10 @@ body{
 .btn.btn-close-white{
     color: black;
 }
+/* tamaño minimo de imágenes de datos */
+.w-25{
+  min-width: 3em;
+}
 
 /* estilo de secciones */
 .seccion{
@@ -32,7 +36,7 @@ body{
    }
 /* estilo de secciones para directivas*/
 .fondouser{
-  background-color: #309fa7cb;
+  background-color: #0b464bcb;
 }   
 /* puntos de particulas dinamicas */
    .starsec{

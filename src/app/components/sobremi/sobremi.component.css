@@ -5,3 +5,7 @@
  position: absolute;
  margin-left: -3rem;
 }
+/*opacidad de selectores*/
+.position-absolute{
+    opacity: 0.6;
+}

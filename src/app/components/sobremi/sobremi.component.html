@@ -2,6 +2,13 @@
 <!-- boton mostrar ocultar
   <button type="button" class="btn btn-primary" (click)="mostrar=!mostrar">mostrar/ocultar</button> -->
   <div class="seccion container-fluid rounded shadow-sm mb-5 bg-body-transparent p-0" [ngClass]="{fondouser : isLogged}">
+    <div class="position-absolute">        
+      <a href="#experiencia"><button class="btn btn-dark">Experiencia</button></a>
+      <a href="#educacion"><button class="btn btn-dark">Educacion</button></a>
+      <a href="#habilidades"><button class="btn btn-dark">Habilidades</button></a>
+      <a href="#proyectos"><button class="btn btn-dark">Proyectos</button></a>
+      <a href="#footer"><button class="btn btn-dark">Contacto</button></a>        
+    </div>
       <app-banner></app-banner>
        <!-- Button trigger modal -->
       <button type="button" *ngIf="isLogged" data-bs-toggle="modal" data-bs-target="#bannerModal" class="btn btn-close-white editBanner"><i class="fa-solid fa-pencil"></i></button> 
