@@ -11,13 +11,9 @@ import { HabilidadesComponent } from './components/habilidades/habilidades.compo
 import { ProyectosComponent } from './components/proyectos/proyectos.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { ModalesComponent } from './components/modales/modales.component';
-import { LogoapComponent } from './components/menu/logoap/logoap.component';
-import { RedesComponent } from './components/menu/redes/redes.component';
 import { LoginComponent } from './components/menu/login/login.component';
 import { LogoutComponent } from './components/menu/logout/logout.component';
 import { ModalLoginComponent } from './components/menu/login/modal-login/modal-login.component';
-import { BannerComponent } from './components/sobremi/sobremicomp/banner/banner.component';
-import { ProfileimgComponent } from './components/sobremi/sobremicomp/profileimg/profileimg.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { interceptorProvider } from './services/interceptor-service';
@@ -35,13 +31,9 @@ import { IndexComponent } from './components/index/index.component';
     ProyectosComponent,
     FooterComponent,
     ModalesComponent,
-    LogoapComponent,
-    RedesComponent,
     LoginComponent,
     LogoutComponent,
     ModalLoginComponent,
-    BannerComponent,
-    ProfileimgComponent,
     Pagina404Component,
     IndexComponent
   ],

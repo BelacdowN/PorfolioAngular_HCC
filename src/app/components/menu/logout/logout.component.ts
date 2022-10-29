@@ -17,11 +17,6 @@ export class LogoutComponent implements OnInit {
     this.tokenService.logOut();
     window.location.reload();
   }
-
-  prueba(): void{
-        console.log('a ver si hace algo');
-  }
-
  
   
 }

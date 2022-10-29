@@ -3,5 +3,19 @@
     height: 4em;
 }
 
-
+/*iconos de navbar */
+.fa-linkedin:hover{
+    color: rgb(99, 154, 190);
+    -webkit-transition: all .3s;
+    transition: all .3s;
+    -webkit-transform: rotate(50deg);
+            transform: rotate(50deg);
+}
+.fa-github:hover{
+    color: rgb(209, 164, 123);
+    -webkit-transition: all .3s;
+    transition: all .3s;
+    -webkit-transform: rotate(50deg);
+            transform: rotate(50deg);
+}
 
