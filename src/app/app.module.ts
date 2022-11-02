@@ -10,7 +10,6 @@ import { EducacionComponent } from './components/educacion/educacion.component';
 import { HabilidadesComponent } from './components/habilidades/habilidades.component';
 import { ProyectosComponent } from './components/proyectos/proyectos.component';
 import { FooterComponent } from './components/footer/footer.component';
-import { ModalesComponent } from './components/modales/modales.component';
 import { LoginComponent } from './components/menu/login/login.component';
 import { LogoutComponent } from './components/menu/logout/logout.component';
 import { ModalLoginComponent } from './components/menu/login/modal-login/modal-login.component';
@@ -19,6 +18,13 @@ import { FormsModule } from '@angular/forms';
 import { interceptorProvider } from './services/interceptor-service';
 import { Pagina404Component } from './components/pagina404/pagina404.component';
 import { IndexComponent } from './components/index/index.component';
+import { ModalBannerComponent } from './modales/modal-banner/modal-banner.component';
+import { ModalPerfilComponent } from './modales/modal-perfil/modal-perfil.component';
+import { ModalSobremiComponent } from './modales/modal-sobremi/modal-sobremi.component';
+import { ModalExperienciaComponent } from './modales/modal-experiencia/modal-experiencia.component';
+import { ModalEducacionComponent } from './modales/modal-educacion/modal-educacion.component';
+import { ModalHabilidadesComponent } from './modales/modal-habilidades/modal-habilidades.component';
+import { ModalProyectosComponent } from './modales/modal-proyectos/modal-proyectos.component';
 
 @NgModule({
   declarations: [
@@ -30,12 +36,18 @@ import { IndexComponent } from './components/index/index.component';
     HabilidadesComponent,
     ProyectosComponent,
     FooterComponent,
-    ModalesComponent,
     LoginComponent,
     LogoutComponent,
     ModalLoginComponent,
     Pagina404Component,
-    IndexComponent
+    IndexComponent,
+    ModalBannerComponent,
+    ModalPerfilComponent,
+    ModalSobremiComponent,
+    ModalExperienciaComponent,
+    ModalEducacionComponent,
+    ModalHabilidadesComponent,
+    ModalProyectosComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,25 @@
+ <!-- Modal Habilidades -->
+ <div class="modal fade" id="habilidadesModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Editar Habilidad</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <form name="habilidadesForm"> 
+                <!-- formulario de habilidad-->
+                <div class="mb-3">
+                  <label for="habilidadNombre" class="form-label">Modificar Habilidad</label>
+                  <input type="text" class="form-control" id="habilidadNombre" placeholder="Nombre nuevo">
+                </div>
+                  <label for="habilidadPorcentaje" class="form-label">Modificar Porcentaje de Manejo (Escala 0-100)</label>
+                  <input type="number" min="0" max="100" id="habilidadPorcentaje">
+            </form>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btnLogin">Guardar</button>
+        </div>
+      </div>
+    </div>
+  </div>

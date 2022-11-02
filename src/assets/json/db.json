@@ -1,130 +1,210 @@
 {
-    "personas": [
+  
+
+  "personas": [
       {
         "id": 1,
-        "banner": "assets/img/FondoPC.png",
-        "profileImage": "assets/img/profile.jpg",
-        "nombrePerfil": "Heber Caleb Cuevas",
-        "tituloPerfil": "Desarrollador Web Full Stack Jr",
-        "sobreMiPerfil": "Buenas! Soy Heber Cuevas y vivo en Río Primero, provincia de Córdoba. Tengo experiencia en trabajos de administración en varias empresas, pero actualmente busco adentrarme en la rama del desarrollo web para crecer y progresar en mi carrera profesional. Aparte de esto soy músico, toco la guitarra y me gustan las motos."
+        "banner": "../assets/img/FondoPC.jpg",
+        "profileImage": "../assets/img/profile.jpg",
+        "nombre": "Heber Caleb",
+        "apellido":"Cuevas",
+        "email": "ejemplo@mail.com",
+        "titulo": "Desarrollador Web Full Stack Jr",
+        "sobreMi": "Buenas! Soy Heber Cuevas y vivo en Río Primero, provincia de Córdoba. Tengo experiencia en trabajos de administración en varias empresas, pero actualmente busco adentrarme en la rama del desarrollo web para crecer y progresar en mi carrera profesional. Aparte de esto soy músico, toco la guitarra y me gustan las motos."
+      },
+      {
+        "id": 2,
+        "banner": "../assets/img/fondoPaisaje.jpg",
+        "profileImage": "../assets/img/LogoArgPro.jpg",
+        "nombre": "Alicia",
+        "apellido":"Maravillas",
+        "email": "ejemplo@mail.com",
+        "titulo": "Soñadora en potencia",
+        "sobreMi": "Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen."
+      },
+      {
+        "id": 3,
+        "banner": "../assets/img/LogoArgPro.jpg",
+        "profileImage": "../assets/img/LogoGinastera.png",
+        "nombre": "Otra Persona Ginastera",
+        "apellido":"Ginastera",
+        "email": "ejemplo@mail.com",
+        "titulo": "Soñadora en potencia",
+        "sobreMi": "Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen."
       }
     ],
 
     "experiencias": [
         {
           "id": 1,
-          "logoEmpresa": "assets/img/LogoTejamax.png",
-          "urlEmpresa": "urlTejamax",
+          "logoEmpresa": "../assets/img/LogoTejamax.png",
+          "url": "https://www.grupotejamax.com/",
           "puesto": "Administración",
           "inicio": "02-02-2013",
-          "fin": "02-01.2022",
-          "descipcion": "Auxiliar Administrativo en TEJAMAX SA orientado al sector mantenimiento, trabajos con normas ISO 9000 y 9001 en SGC, experiencia en cotizaciones de compra, atención a clientes y proveedores, controles de producción y stock, programación de mantenimientos preventivos, manejo de indicadores de mantenimiento y consumos, manejo de Office, manejo de dinero y rendiciones de caja, conducción de vehículos livianos."
+          "fin": "02-01-2022",
+          "descripcion": "Auxiliar Administrativo en Tejamax SA orientado al sector mantenimiento, trabajos con normas ISO 9000 y 9001 en SGC, experiencia en cotizaciones de compra, atención a clientes y proveedores, controles de producción y stock, programación de mantenimientos preventivos, manejo de indicadores de mantenimiento y consumos, manejo de Office, manejo de dinero y rendiciones de caja, conducción de vehículos livianos."
         },
         {
             "id": 2,
-            "logoEmpresa": "assets/img/LogoRaful.png",
-            "urlEmpresa": "urlRaful",
+            "logoEmpresa": "../assets/img/LogoRaful.png",
+            "url": "http://www.organizacionesraful.com/",
             "puesto": "Administración",
             "inicio": "05-10-2011",
             "fin": "15-01-2013",
-            "descipcion": "Administrativo en PREMOLDEADOS RAFUL., con experiencia en cotizaciones de venta, atención a clientes, controles de producción y stock, manejo de Office."
+            "descripcion": "Administrativo en premoldeados Raful, con experiencia en cotizaciones de venta, atención a clientes, controles de producción y stock, manejo de Office."
           },
           {
             "id": 3,
-            "logoEmpresa": "assets/img/LogoShell.png",
-            "urlEmpresa": "urlShell",
+            "logoEmpresa": "../assets/img/LogoShell.png",
+            "url": "https://find.shell.com/ar/fuel/AR_10038541-santa-rosa-combustibles-srl",
             "puesto": "Vendedor de playa",
             "inicio": "01-03-2010",
             "fin": "20-10-2011",
-            "descipcion": "Vendedor de playa en ESTACIÓN DE SERVICIO SHELL Río Primero, con experiencia en manejo de dinero, rendición de caja, manejo de PC, atención a clientes."
+            "descripcion": "Vendedor de playa en estación de servicio Shell Río Primero, con experiencia en manejo de dinero, rendición de caja, manejo de PC, atención a clientes."
           }
       ],
 
       "educaciones": [
         {
           "id": 1,
-          "logoEstudio": "assets/img/LogoFCEFyN.png",
-          "urlEstudio": "urlFCEFyN",
-          "estudio": "TECNICO MECANICO ELECTRICISTA UNIVERSITARIO (pasivo)",
+          "logoEstudio": "../assets/img/LogoFCEFyN.png",
+          "urlEstudio": "https://fcefyn.unc.edu.ar/",
+          "estudio": "Técnico Mecánico Electricista Universitario (pasivo)",
           "inicio": "03-03-2009",
           "fin": "15-02-2010",
-          "descipcion": "Facultad de Ciencias Exactas, Físicas y Naturales de la Universidad Nacional de Córdoba, la Carrera de TECNICO MECANICO ELECTRICISTA UNIVERSITARIO, cursado 1er año."
+          "descripcion": "Facultad de Ciencias Exactas, Físicas y Naturales de la Universidad Nacional de Córdoba, la Carrera de Técnico Mecánico Electricista Universitario, cursado 1er año."
         },
         {
             "id": 2,
-            "logoEstudio": "assets/img/LogoArgPro.png",
-            "urlEstudio": "urlArgPro",
+            "logoEstudio": "../assets/img/LogoArgPro.jpg",
+            "urlEstudio": "https://www.argentina.gob.ar/economia/conocimiento/argentina-programa",
             "estudio": "Desarrollador Web FullStack Junior",
             "inicio": "28-06-2022",
             "fin": "13-01-2023",
-            "descipcion": "Desarrollador Web Full Stack Junior (HTML · CSS · Boopstrap · Fontawesome · JSON · Angular · Java · JavaScript · Bases de datos · DevOps)"
+            "descripcion": "Desarrollador Web Full Stack Junior (HTML · CSS · Boopstrap · Fontawesome · JSON · Angular · Java · JavaScript · Bases de datos · DevOps)"
           },
         {
             "id": 3,
-            "logoEstudio": "assets/img/LogoInglesDesa.png",
-            "urlEstudio": "urlInglesDesa",
+            "logoEstudio": "../assets/img/LogoInglesDesa.jpg",
+            "urlEstudio": "https://www.argentina.gob.ar/economia/conocimiento/argentina-programa",
             "estudio": "Curso de Inglés Para Desarrolladores de Software",
             "inicio": "02-04-2022",
             "fin": "06-06-2022",
-            "descipcion": "Curso de Inglés orientado para desarrolladores de software, disertado por Naila Zach como complemento de la 2da etapa del curso Argentina Programa"
+            "descripcion": "Curso de Inglés orientado para desarrolladores de software, disertado por Naila Zach como complemento de la 2da etapa del curso Argentina Programa"
           },
         {
             "id": 4,
-            "logoEstudio": "assets/img/LogoOffice.png",
-            "urlEstudio": "urlOffice",
+            "logoEstudio": "../assets/img/LogoOffice.jpg",
+            "urlEstudio": "https://www.cpcipc.org.ar/",
             "estudio": "Operador Informático de Aplicaciones Office",
             "inicio": "10-06-2008",
             "fin": "15-09-2008",
-            "descipcion": "Operador Informático de Aplicaciones Office Word Excel Powerpoint n° Orden 11058"
+            "descripcion": "Operador Informático de Aplicaciones Office Word Excel Powerpoint n° Orden 11058"
           },
         {
             "id": 5,
-            "logoEstudio": "assets/img/LogoGinastera.png",
-            "urlEstudio": "urlGinastera",
+            "logoEstudio": "../assets/img/LogoGinastera.png",
+            "urlEstudio": "https://www.facebook.com/pages/category/Local-business/Conservatorio-Alberto-Ginastera-445100282536202/",
             "estudio": "Ciclo Artístico Vocacional en Guitarra",
             "inicio": "01-04-2017",
             "fin": "30-11-2017",
-            "descipcion": "1er año de Ciclo Artístico Vocacional en Guitarra en Conservatorio “Alberto E. Ginastera”"
+            "descripcion": "1er año de Ciclo Artístico Vocacional en Guitarra en Conservatorio “Alberto E. Ginastera”"
           }
     ],
-
     "habilidades": [
         {
           "id": 1,
-          "habilidad": "HTML",
+          "nombre": "HTML",
           "porcentaje": "75"
         },
         {
             "id": 2,
-            "habilidad": "CSS",
-            "porcentaje": "60"
+            "nombre": "CSS",
+            "porcentaje": "65"
           },
           {
             "id": 3,
-            "habilidad": "JAVA",
+            "nombre": "JAVA",
             "porcentaje": "50"
           },
           {
             "id": 4,
-            "habilidad": "JavaScript",
+            "nombre": "JavaScript",
             "porcentaje": "35"
           },
           {
             "id": 5,
-            "habilidad": "Boopstrap",
+            "nombre": "Bootstrap",
             "porcentaje": "90"
+          },
+          {
+            "id": 6,
+            "nombre": "Adaptabilidad",
+            "porcentaje": "80"
+          },
+          {
+              "id": 7,
+              "nombre": "Trabajo en Equipo",
+              "porcentaje": "90"
+            },
+            {
+              "id": 8,
+              "nombre": "Aprendizaje Rápido",
+              "porcentaje": "80"
+            },
+            {
+              "id": 9,
+              "nombre": "Resolución de Problemas",
+              "porcentaje": "85"
+            },
+            {
+              "id": 10,
+              "nombre": "Manejo del tiempo",
+              "porcentaje": "95"
+            }
+      ],
+      "redes": [
+        
+          {
+            "id": 1,
+            "nombre": "LinkedIn",
+            "url": "https://www.linkedin.com/in/heber-caleb-cuevas-1508bb224/",
+          "icoFont": "fa-brands fa-linkedin fa-xl"
+          },
+          {
+            "id": 2,
+            "nombre": "Github",
+            "url": "https://github.com/BelacdowN",
+          "icoFont": "fa-brands fa-github fa-xl"
           }
       ],
-      
       "proyectos": [
         {
             "id": 1,
-            "logoProyecto": "assets/img/LogoAPLogo.png",
-            "urlProyecto": "urlAPLogo",
-            "tituloProyecto": "Armado de Login",
-            "inicio": "01-08-2022",
+            "logoProyecto": "../assets/img/LogoArgPro.jpg",
+            "urlProyecto": "https://github.com/BelacdowN/PorfolioAngular_HCC",
+            "tituloProyecto": "Porfolio Argentina Programa",
+            "inicio": "28-06-2022",
             "fin": "13-01-2023",
-            "descipcion": "Armado de login con campos y detalles sugeridos en trabajo práctico Argentina Programa"
-        }
+            "descripcion": "Armado de Proyecto integrador de porfolio web, utilizando tecnologias Angular, Apache Netbeans, MySQL Workbench, Boopstrap. Lenguajes HTML, CSS, TypeScript, Java."
+        },
+        {
+          "id": 2,
+          "logoProyecto": "../assets/img/LogoArgPro.jpg",
+          "urlProyecto": "https://github.com/BelacdowN/ListaTareas",
+          "tituloProyecto": "Task List",
+          "inicio": "10-09-2022",
+          "fin": "20-09-2022",
+          "descripcion": "Armado de lista de tareas como actividad de práctica de Angular utilizando base de datos local JSON"
+        },
+        {
+          "id": 3,
+          "logoProyecto": "../assets/img/profile.jpg",
+          "urlProyecto": "https://github.com/BelacdowN/proyecto-de-ejemplo-chicas",
+          "tituloProyecto": "Capacitación FrontEnd",
+          "inicio": "03-10-2022",
+          "fin": "20-11-2022",
+          "descripcion": "Capacitación dada a estudiantes, viendo lenguajes HTML y CSS,usando Bootstrap, Fontawesome  para su maquetado y pasado a Angular por componentes, vista de Directivas, Data Binding, Formularios Reactivos."
+         }
       ]
   }

@@ -1,0 +1,31 @@
+  <!-- Modal Perfil -->
+  <div class="modal fade" id="profileModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Editar Perfil</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <form name="perfilForm"> 
+                <!-- formulario de perfil-->
+                <div class="mb-3">
+                  <label for="perfilImg" class="form-label">Modificar imagen de perfil</label>
+                  <input class="form-control" type="file" id="perfilImg">
+                </div>
+                <div class="mb-3">
+                  <label for="perfilNombre" class="form-label">Modificar Nombre</label>
+                  <input type="text" class="form-control" id="perfilNombre" placeholder="Nombre nuevo">
+                </div>
+                <div class="mb-3">
+                  <label for="perfilTitulo" class="form-label">Modificar Titulo</label>
+                  <input type="text" class="form-control" id="perfilTitulo" placeholder="Título nuevo">
+                </div>
+            </form>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btnLogin">Guardar</button>
+        </div>
+      </div>
+    </div>
+</div>
