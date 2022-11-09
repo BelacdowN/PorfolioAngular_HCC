@@ -14,7 +14,7 @@
       <button type="button" *ngIf="isLogged" data-bs-toggle="modal" data-bs-target="#bannerModal" class="btn btn-close-white editBanner"><i class="fa-solid fa-pencil"></i></button> 
       <div class="row p-3">
       <div class="col-3">
-        <img src="assets/img/profile.jpg" class="rounded-circle profileImage w-50" alt="profileImage"> 
+        <img [src]="persona.img" class="rounded-circle profileImage w-50" alt="profileImage"> 
        <!-- Button trigger modal -->  
         <button type="button" *ngIf="isLogged" data-bs-toggle="modal" data-bs-target="#profileModal" class="btn btn-close-white" ><i class="fa-solid fa-pencil"></i></button>
         <br>

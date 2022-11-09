@@ -7,7 +7,7 @@
           </h3>
         </div>              
         <div class="d-flex col-auto mt-2">          
-          <button type="submit" *ngIf="isLogged" class="btn btn-close-white"><i class="fa-solid fa-plus"></i></button>
+          <button type="submit" *ngIf="isLogged" class="btn btn-close-white" data-bs-toggle="modal" data-bs-target="#habilidadesModalAdd"><i class="fa-solid fa-plus"></i></button>
         </div>
       </div>
         
@@ -96,3 +96,4 @@
 </div>
 </section>  
 <app-modal-habilidades></app-modal-habilidades>
+<app-modal-habilidades-add></app-modal-habilidades-add>
