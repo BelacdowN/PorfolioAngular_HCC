@@ -14,7 +14,7 @@ import { LoginComponent } from './components/menu/login/login.component';
 import { LogoutComponent } from './components/menu/logout/logout.component';
 import { ModalLoginComponent } from './components/menu/login/modal-login/modal-login.component';
 import { HttpClientModule } from '@angular/common/http';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { interceptorProvider } from './services/interceptor-service';
 import { Pagina404Component } from './components/pagina404/pagina404.component';
 import { IndexComponent } from './components/index/index.component';
@@ -61,7 +61,8 @@ import { ModalProyectosAddComponent } from './modales/modal-proyectos-add/modal-
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [
     interceptorProvider

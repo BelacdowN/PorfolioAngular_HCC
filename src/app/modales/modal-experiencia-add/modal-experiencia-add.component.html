@@ -7,41 +7,45 @@
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-            <form name="experienciaForm"> 
+            <form  #f="ngForm" (ngSubmit)="onCreate()" novalidate name="experienciaForm"> 
                 <!-- formulario de experiencia-->
                 <div class="mb-3">
-                  <label for="experienciaImg" class="form-label">Agregar Logo de Empresa</label>
-                  <input class="form-control" type="file" id="experienciaImg">
+                  <label for="imagen" class="form-label">Agregar Logo de Empresa</label>
+                  <input class="form-control" type="url" id="imagen" name="imagen" [(ngModel)]="imagen" placeholder="Ingrese URL">
                 </div>
                 <div class="mb-3">
-                  <label for="experienciaUrl" class="form-label">Agregar URL de Empresa</label>
-                  <input type="url" class="form-control" id="experienciaUrl" placeholder="Nueva URL">
+                  <label for="url" class="form-label">Agregar URL de Empresa</label>
+                  <input type="url" class="form-control" id="url" name="url" [(ngModel)]="url" placeholder="Nueva URL">
                 </div>
                 <div class="mb-3">
-                  <label for="experienciaCargo" class="form-label">Agregar Cargo</label>
-                  <input type="text" class="form-control" id="experienciaCargo" placeholder="Nombre nuevo">
+                  <label for="empresa" class="form-label">Agregar Empresa</label>
+                  <input type="text" class="form-control" id="empresa" name="empresa" [(ngModel)]="empresa" required placeholder="Empresa nueva">
                 </div>
                 <div class="mb-3">
-                  <label for="experienciaPeriodoInicio" class="form-label">Agregar Periodo Inicio</label>
-                  <input type="date" class="form-control" id="experienciaPeriodoInicio">
+                  <label for="puesto" class="form-label">Agregar Cargo</label>
+                  <input type="text" class="form-control" id="puesto" name="puesto" [(ngModel)]="puesto" required placeholder="Nombre nuevo">
                 </div>
                 <div class="mb-3">
-                  <label for="experienciaPeriodoFin" class="form-label">Agregar Periodo Fin</label>
-                  <input type="date" class="form-control" id="experienciaPeriodoFin">
+                  <label for="inicio" class="form-label">Agregar Periodo Inicio</label>
+                  <input type="date" class="form-control" id="inicio" name="inicio" [(ngModel)]="inicio">
                 </div>
                 <div class="mb-3">
-                    <label for="experienciaInfo" class="form-label">Agregar Información de Cargo</label>
-                    <textarea class="form-control" id="experienciaInfo" rows="3"></textarea>
+                  <label for="fin" class="form-label">Agregar Periodo Fin</label>
+                  <input type="date" class="form-control" id="fin" name="fin" [(ngModel)]="fin"> 
+                </div>
+                <div class="mb-3">
+                    <label for="descripcion" class="form-label">Agregar Información de Cargo</label>
+                    <textarea class="form-control" id="descripcion" name="descripcion" [(ngModel)]="descripcion" rows="3"></textarea>
                 </div>
                 <div class="form-check form-switch">
-                  <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
-                  <label class="form-check-label" for="flexSwitchCheckDefault">Es trabajo actual</label>
+                  <label class="form-check-label" for="esTrabajoActual">Es trabajo actual</label>
+                  <input class="form-check-input" type="checkbox" role="switch" id="esTrabajoActual" name="esTrabajoActual" [(ngModel)]="esTrabajoActual">
                 </div>
-            </form>
-        </div>
-        <div class="modal-footer">
-            <button type="button" class="btn btnLogin">Agregar</button>          
-        </div>
+                <div class="modal-footer">
+                  <button type="submit" class="btn btnLogin" data-bs-dismiss="modal">Agregar</button>          
+                </div>
+              </form>
+          </div>
       </div>
     </div>
   </div>
