@@ -13,7 +13,7 @@
       </div>
       <div class="row" *ngFor="let experiencia of experiencias">
         <div class="col-3">
-          <a [href]="experiencia.url" target="_blank"><img [src]="experiencia.imagen" class="rounded-circle w-25 imgExp"  [alt]="experiencia.puesto"></a> <br>
+          <a [href]="experiencia.url" target="_blank"><img [src]="experiencia.imagen" class="rounded-circle w-25 imgExp"  [alt]="experiencia.empresa"></a> <br>
           <h5>{{experiencia.puesto}}</h5>
           <h6>{{experiencia.inicio | date:"dd-MM-yyyy"}} {{experiencia.fin  | date:"dd-MM-yyyy"}}</h6>
         </div>
@@ -21,12 +21,13 @@
           <h4>{{experiencia.descripcion}}</h4>
         </div>
         <div class="col-1">
-          <button type="button" class="btn btn-close-white" data-bs-toggle="modal" data-bs-target="#experienciaModal" *ngIf="isLogged"><i class="fa-solid fa-pencil"></i></button>
-         <button type="submit" class="btn btn-close-white" *ngIf="isLogged"><i class="fa-solid fa-trash-can"></i></button>
+          <button type="button" class="btn btn-close-white" data-bs-toggle="modal"  data-bs-target="#experienciaModalEd" *ngIf="isLogged" ><i class="fa-solid fa-pencil"></i></button>
+          <button type="submit" class="btn btn-close-white" *ngIf="isLogged" (click)="delete(experiencia.id)"><i class="fa-solid fa-trash-can"></i></button>
         </div>
         <br><hr class="col-11">      
       </div>
     </div>
   </section>  
-<app-modal-experiencia></app-modal-experiencia>
+  <app-modal-experiencia></app-modal-experiencia>
 <app-modal-experiencia-add></app-modal-experiencia-add>
+

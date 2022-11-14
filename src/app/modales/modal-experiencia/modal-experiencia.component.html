@@ -1,50 +1,51 @@
  <!-- Modal Experiencia -->
- <div class="modal fade" id="experienciaModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+ <div class="modal fade" id="experienciaModalEd" tabindex="-1" aria-labelledby="experienciaModalEd" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Editar Experiencia</h5>
+        <h5 class="modal-title" id="experienciaModalEd">Editar Experiencia</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
         <!-- formulario de experiencia-->
-          <!-- <form  #f="ngForm" (ngSubmit)="onUpdate()" novalidate name="experienciaForm"> 
+          <form  #f="ngForm" (ngSubmit)="onUpdate()" novalidate name="experienciaForm"> 
+            <input type="hidden" name="id" id="id">
               <div class="mb-3">
                 <label for="imagen" class="form-label">Editar Logo de Empresa</label>
-                <input class="form-control" type="url" id="imagen" name="imagen" [(ngModel)]="exp.imagen" placeholder="Ingrese URL">
+                <input class="form-control" type="url" id="imagen" name="imagen" [(ngModel)]="experiencia.imagen" placeholder="Ingrese URL">
               </div>
               <div class="mb-3">
                 <label for="url" class="form-label">Editar URL de Empresa</label>
-                <input type="url" class="form-control" id="url" name="url" [(ngModel)]="exp.url" placeholder="Nueva URL">
+                <input type="url" class="form-control" id="url" name="url" [(ngModel)]="experiencia.url" placeholder="Nueva URL">
               </div>
               <div class="mb-3">
                 <label for="empresa" class="form-label">Editar Empresa</label>
-                <input type="text" class="form-control" id="empresa" name="empresa" [(ngModel)]="exp.empresa" required placeholder="Empresa nueva">
+                <input type="text" class="form-control" id="empresa" name="empresa" [(ngModel)]="experiencia.empresa" required placeholder="Empresa nueva">
               </div>
               <div class="mb-3">
                 <label for="puesto" class="form-label">Editar Cargo</label>
-                <input type="text" class="form-control" id="puesto" name="puesto" [(ngModel)]="exp.puesto" required placeholder="Nombre nuevo">
+                <input type="text" class="form-control" id="puesto" name="puesto" [(ngModel)]="experiencia.puesto" required placeholder="Nombre nuevo">
               </div>
               <div class="mb-3">
                 <label for="inicio" class="form-label">Editar Periodo Inicio</label>
-                <input type="date" class="form-control" id="inicio" name="inicio" [(ngModel)]="exp.inicio">
+                <input type="date" class="form-control" id="inicio" name="inicio" [(ngModel)]="experiencia.inicio">
               </div>
               <div class="mb-3">
                 <label for="fin" class="form-label">Editar Periodo Fin</label>
-                <input type="date" class="form-control" id="fin" name="fin" [(ngModel)]="exp.fin"> 
+                <input type="date" class="form-control" id="fin" name="fin" [(ngModel)]="experiencia.fin"> 
               </div>
               <div class="mb-3">
                   <label for="descripcion" class="form-label">Editar Información de Cargo</label>
-                  <textarea class="form-control" id="descripcion" name="descripcion" [(ngModel)]="exp.descripcion" rows="3"></textarea>
+                  <textarea class="form-control" id="descripcion" name="descripcion" [(ngModel)]="experiencia.descripcion" rows="3"></textarea>
               </div>
               <div class="form-check form-switch">
                 <label class="form-check-label" for="esTrabajoActual">Editar Es trabajo actual</label>
-                <input class="form-check-input" type="checkbox" role="switch" id="esTrabajoActual" name="esTrabajoActual" [(ngModel)]="exp.esTrabajoActual">
+                <input class="form-check-input" type="checkbox" role="switch" id="esTrabajoActual" name="esTrabajoActual" [(ngModel)]="experiencia.esTrabajoActual">
               </div>
               <div class="modal-footer">
                 <button type="submit" class="btn btnLogin" data-bs-dismiss="modal">Guardar</button>          
               </div>
-            </form> -->
+            </form>
         </div>
     </div>
   </div>
