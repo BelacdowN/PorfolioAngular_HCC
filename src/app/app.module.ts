@@ -1,7 +1,9 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
+
 import { AppComponent } from './app.component';
 import { NabvarComponent } from './components/nabvar/nabvar.component';
 import { SobremiComponent } from './components/sobremi/sobremi.component';
@@ -13,8 +15,6 @@ import { FooterComponent } from './components/footer/footer.component';
 import { LoginComponent } from './components/menu/login/login.component';
 import { LogoutComponent } from './components/menu/logout/logout.component';
 import { ModalLoginComponent } from './components/menu/login/modal-login/modal-login.component';
-import { HttpClientModule } from '@angular/common/http';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { interceptorProvider } from './services/interceptor-service';
 import { Pagina404Component } from './components/pagina404/pagina404.component';
 import { IndexComponent } from './components/index/index.component';

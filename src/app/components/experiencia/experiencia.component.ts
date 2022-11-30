@@ -11,6 +11,8 @@ import { TokenService } from 'src/app/services/token.service';
 export class ExperienciaComponent implements OnInit {
   isLogged = false;
   experiencias: Experiencia[]=[]; //se llama al modelo que es un array
+  idEditar : number;
+  isTrue = false;
 
   constructor(private tokenService: TokenService, private sExperiencia: ExperienciaService) { }
 
@@ -27,7 +29,12 @@ export class ExperienciaComponent implements OnInit {
     this.sExperiencia.lista().subscribe(data => {this.experiencias=data});
   }
 
-  delete(id?:number){
+idEdit(id:number){
+  this.isTrue = true;
+  this.idEditar = id;
+}
+
+  delete(id:number){
     if(id != undefined){
       this.sExperiencia.delete(id).subscribe(
         data =>{
@@ -35,10 +42,8 @@ export class ExperienciaComponent implements OnInit {
           this.cargarExperiencia();
         }, err =>{
           alert("no se pudo eliminar la experiencia")
-        }
-      )
-    }
-  }
-
+        })
+    }}
+  
   
 }

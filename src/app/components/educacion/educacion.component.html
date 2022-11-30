@@ -11,86 +11,27 @@
          <button type="submit" *ngIf="isLogged" class="btn btn-close-white" data-bs-toggle="modal" data-bs-target="#educacionModalAdd"><i class="fa-solid fa-plus"></i></button>
         </div>
       </div>
-      <div class="row">
+      <div class="row" *ngFor="let estudio of estudios">
         <div class="col-3">
-          <img src="assets/img/LogoFCEFyN.png" class="rounded-circle w-25" alt="logoFCEFyN"> <br>
-          <h5>Técnico Mecánico Electricista Universitario (pasivo)</h5>
-          <h6>03-03-2009 15-02-2010</h6>
+          <a [href]="estudio.url" target="_blank"><img [src]="estudio.imagen" class="rounded-circle w-25 imgExp"  [alt]="estudio.institucion"></a> <br>
+          <h5>{{estudio.estudio}}</h5>
+          <h6>{{estudio.inicio | date:"dd-MM-yyyy"}} {{estudio.fin  | date:"dd-MM-yyyy"}}</h6>
         </div>
         <div class="col-8">
-          <h4>Facultad de Ciencias Exactas, Físicas y Naturales de la Universidad Nacional de Córdoba, la Carrera de Técnico Mecánico Electricista Universitario, cursado 1er año.</h4>
+          <h4>{{estudio.descripcion}}</h4>
         </div>
         <div class="col-1 p-0">
             <!-- Button trigger modal --> 
-            <button type="button" *ngIf="isLogged" data-bs-toggle="modal" data-bs-target="#educacionModal" class="btn btn-close-white"><i class="fa-solid fa-pencil"></i></button>
-            <button type="submit" *ngIf="isLogged" class="btn btn-close-white"><i class="fa-solid fa-trash-can"></i></button>                
+            <button type="submit" *ngIf="isLogged" data-bs-toggle="modal" data-bs-target="#educacionModal" class="btn btn-close-white"><i class="fa-solid fa-pencil" (click)="idEdit(estudio.id)"></i></button>
+            
+            <button type="submit" *ngIf="isLogged" class="btn btn-close-white" (click)="delete(estudio.id)"><i class="fa-solid fa-trash-can"></i></button>                
         </div>
+        <br><hr class="col-11">
       </div>
-      <br><hr class="col-11">
-      <div class="row">
-        <div class="col-3">
-          <img src="assets/img/LogoArgPro.jpg" class="rounded-circle w-25" alt="logoFCEFyN"> <br>
-          <h5>Desarrollador Web FullStack Junior</h5>
-          <h6>28-06-2022 13-01-2023</h6>
-        </div>
-        <div class="col-8">
-          <h4>Desarrollador Web Full Stack Junior (HTML · CSS · Boopstrap · Fontawesome · JSON · Angular · Java · JavaScript · Bases de datos · DevOps)</h4>
-        </div>
-        <div class="col-1 p-0">
-            <!-- Button trigger modal --> 
-            <button type="button" *ngIf="isLogged" data-bs-toggle="modal" data-bs-target="#educacionModal" class="btn btn-close-white"><i class="fa-solid fa-pencil"></i></button>
-            <button type="submit" *ngIf="isLogged" class="btn btn-close-white"><i class="fa-solid fa-trash-can"></i></button>
-        </div>
-      </div>
-      <br><hr class="col-11">
-      <div class="row">
-        <div class="col-3">
-          <img src="assets/img/LogoInglesDesa.jpg" class="rounded-circle w-25" alt="logoFCEFyN"> <br>
-          <h5>Curso de Inglés Para Desarrolladores de Software</h5>
-          <h6>02-04-2022 06-06-2022</h6>
-        </div>
-        <div class="col-8">
-          <h4>Curso de Inglés orientado para desarrolladores de software, disertado por Naila Zach como complemento de la 2da etapa del curso Argentina Programa</h4>
-        </div>
-        <div class="col-1 p-0">
-            <!-- Button trigger modal --> 
-            <button type="button" *ngIf="isLogged" data-bs-toggle="modal" data-bs-target="#educacionModal" class="btn btn-close-white"><i class="fa-solid fa-pencil"></i></button>
-            <button type="submit" *ngIf="isLogged" class="btn btn-close-white"><i class="fa-solid fa-trash-can"></i></button>
-        </div>
-      </div>
-      <br><hr class="col-11">
-      <div class="row">
-        <div class="col-3">
-          <img src="assets/img/LogoOffice.jpg" class="rounded-circle w-25" alt="logoFCEFyN"> <br>
-          <h5>Operador Informático de Aplicaciones Office</h5>
-          <h6>10-06-2008 15-09-2008</h6>
-        </div>
-        <div class="col-8">
-          <h4>Operador Informático de Aplicaciones Office Word Excel Powerpoint n° Orden 11058</h4>
-        </div>
-        <div class="col-1 p-0">
-            <!-- Button trigger modal --> 
-            <button type="button" *ngIf="isLogged" data-bs-toggle="modal" data-bs-target="#educacionModal" class="btn btn-close-white"><i class="fa-solid fa-pencil"></i></button>
-            <button type="submit" *ngIf="isLogged" class="btn btn-close-white"><i class="fa-solid fa-trash-can"></i></button>
-        </div>
-      </div>
-      <br><hr class="col-11">
-      <div class="row">
-        <div class="col-3">
-          <img src="assets/img/LogoGinastera.png" class="rounded-circle w-25" alt="logoFCEFyN"> <br>
-          <h5>Ciclo Artístico Vocacional en Guitarra</h5>
-          <h6>01-04-2017 30-11-2017</h6>
-        </div>
-        <div class="col-8">
-          <h4>1er año de Ciclo Artístico Vocacional en Guitarra en Conservatorio “Alberto E. Ginastera”</h4>
-        </div>
-        <div class="col-1 p-0">
-            <!-- Button trigger modal --> 
-            <button type="button" *ngIf="isLogged" data-bs-toggle="modal" data-bs-target="#educacionModal" class="btn btn-close-white"><i class="fa-solid fa-pencil"></i></button>
-            <button type="submit" *ngIf="isLogged" class="btn btn-close-white"><i class="fa-solid fa-trash-can"></i></button>
-        </div>
-      </div>
+      
     </div>
   </section> 
-  <app-modal-educacion></app-modal-educacion>
+  <div *ngIf="isTrue">
+    <app-modal-educacion ></app-modal-educacion>
+  </div>
   <app-modal-educacion-add></app-modal-educacion-add>

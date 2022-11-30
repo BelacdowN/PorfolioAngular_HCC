@@ -9,12 +9,12 @@ import { TokenService } from 'src/app/services/token.service';
   styleUrls: ['./sobremi.component.css']
 })
 export class SobremiComponent implements OnInit {
-  persona: persona = new persona("","","","","","");
+  persona: persona = null;
   isLogged = false;
   constructor(public personaService: PersonaService, private tokenService: TokenService) { }
 
   ngOnInit(): void {
-    this.personaService.getPersona().subscribe(data => {this.persona = data});
+    this.cargarPersona();
     if(this.tokenService.getToken()){
       this.isLogged = true;
     }else{
@@ -22,4 +22,8 @@ export class SobremiComponent implements OnInit {
     }
   }
   
+  cargarPersona():void{
+    this.personaService.detail(1).subscribe(data => 
+      {this.persona=data});
+  }
 }
