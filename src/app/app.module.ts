@@ -18,9 +18,7 @@ import { ModalLoginComponent } from './components/menu/login/modal-login/modal-l
 import { interceptorProvider } from './services/interceptor-service';
 import { Pagina404Component } from './components/pagina404/pagina404.component';
 import { IndexComponent } from './components/index/index.component';
-import { ModalBannerComponent } from './modales/modal-banner/modal-banner.component';
 import { ModalPerfilComponent } from './modales/modal-perfil/modal-perfil.component';
-import { ModalSobremiComponent } from './modales/modal-sobremi/modal-sobremi.component';
 import { ModalExperienciaComponent } from './modales/modal-experiencia/modal-experiencia.component';
 import { ModalEducacionComponent } from './modales/modal-educacion/modal-educacion.component';
 import { ModalHabilidadesComponent } from './modales/modal-habilidades/modal-habilidades.component';
@@ -29,6 +27,7 @@ import { ModalEducacionAddComponent } from './modales/modal-educacion-add/modal-
 import { ModalExperienciaAddComponent } from './modales/modal-experiencia-add/modal-experiencia-add.component';
 import { ModalHabilidadesAddComponent } from './modales/modal-habilidades-add/modal-habilidades-add.component';
 import { ModalProyectosAddComponent } from './modales/modal-proyectos-add/modal-proyectos-add.component';
+import { ModalRedAddComponent } from './modales/modal-red-add/modal-red-add.component';
 
 @NgModule({
   declarations: [
@@ -45,9 +44,7 @@ import { ModalProyectosAddComponent } from './modales/modal-proyectos-add/modal-
     ModalLoginComponent,
     Pagina404Component,
     IndexComponent,
-    ModalBannerComponent,
     ModalPerfilComponent,
-    ModalSobremiComponent,
     ModalExperienciaComponent,
     ModalEducacionComponent,
     ModalHabilidadesComponent,
@@ -55,7 +52,8 @@ import { ModalProyectosAddComponent } from './modales/modal-proyectos-add/modal-
     ModalEducacionAddComponent,
     ModalExperienciaAddComponent,
     ModalHabilidadesAddComponent,
-    ModalProyectosAddComponent
+    ModalProyectosAddComponent,
+    ModalRedAddComponent
   ],
   imports: [
     BrowserModule,

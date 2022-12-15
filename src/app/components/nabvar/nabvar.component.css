@@ -4,6 +4,14 @@
 }
 
 /*iconos de navbar */
+.ico:hover{
+    color: rgb(137, 209, 123);
+    -webkit-transition: all .3s;
+    transition: all .3s;
+    -webkit-transform: rotate(50deg);
+            transform: rotate(50deg);
+}
+
 .fa-linkedin:hover{
     color: rgb(99, 154, 190);
     -webkit-transition: all .3s;

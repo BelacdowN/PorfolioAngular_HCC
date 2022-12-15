@@ -13,7 +13,11 @@ export class EstudioService {
     public lista(): Observable<Estudio[]>{
       return this.httpClient.get<Estudio[]>(this.url + 'lista');
     }
-  
+
+    public listaPer(id: number): Observable<Estudio[]>{
+      return this.httpClient.get<Estudio[]>(this.url + `persona/${id}/lista`);
+    }
+ 
     public detail(id: number):Observable<Estudio>{
     return this.httpClient.get<Estudio>(this.url + `detail/${id}`);
     }
@@ -22,8 +26,8 @@ export class EstudioService {
       return this.httpClient.post<any>(this.url + 'create', Estudio);
       }
   
-    public update(id: number, Estudio: Estudio):Observable<any>{
-      return this.httpClient.put<any>(this.url + `update/${id}`, Estudio);
+    public edit(Estudio: Estudio):Observable<any>{
+      return this.httpClient.put<any>(this.url + 'update', Estudio);
       }
   
     public delete(id: number):Observable<any>{

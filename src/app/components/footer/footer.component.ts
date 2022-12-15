@@ -9,8 +9,8 @@ import { TokenService } from 'src/app/services/token.service';
   styleUrls: ['./footer.component.css']
 })
 export class FooterComponent implements OnInit {
-  perso: persona=null;
-  isLogged = false;
+  perso:persona=null;
+  isLogged:boolean=false;
   constructor(public personaService: PersonaService, private tokenService: TokenService) { }
 
   ngOnInit(): void {

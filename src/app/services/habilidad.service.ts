@@ -14,6 +14,10 @@ export class HabilidadService {
     return this.httpClient.get<Habilidad[]>(this.url + 'lista');
   }
 
+  public listaPer(id: number): Observable<Habilidad[]>{
+    return this.httpClient.get<Habilidad[]>(this.url + `persona/${id}/lista`);
+  }
+
   public detail(id: number):Observable<Habilidad>{
   return this.httpClient.get<Habilidad>(this.url + `detail/${id}`);  
   }
@@ -22,9 +26,9 @@ export class HabilidadService {
     return this.httpClient.post<any>(this.url + 'create', Habilidad);
     }
 
-  public update(id: number, Habilidad: Habilidad):Observable<any>{
-    return this.httpClient.put<any>(this.url + `update/${id}`, Habilidad);
-    }
+  public edit(Habilidad: Habilidad):Observable<any>{
+      return this.httpClient.put<any>(this.url + 'update', Habilidad);
+      }
 
   public delete(id: number):Observable<any>{
     return this.httpClient.delete<any>(this.url + `delete/${id}`);

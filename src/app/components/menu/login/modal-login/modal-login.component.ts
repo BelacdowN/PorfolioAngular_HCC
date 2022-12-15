@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { LoginUsuario } from 'src/app/model/login-usuario';
 import { AuthService } from 'src/app/services/auth.service';
 import { TokenService } from 'src/app/services/token.service';
@@ -10,15 +11,23 @@ import { TokenService } from 'src/app/services/token.service';
   styleUrls: ['./modal-login.component.css']
 })
 export class ModalLoginComponent implements OnInit {
+  form:FormGroup;
   isLogged = false;
   isLogginFail = false;
-  loginUsuario!: LoginUsuario;
-  nombreUsuario!: string;
-  password!: string;
+  loginUsuario: LoginUsuario;
+  nombreUsuario: string;
+  password: string;
   roles: string[] = [];
-  errMsj!: string;
+  errMsj: string;
 
-  constructor(private tokenService: TokenService, private authService: AuthService) { }
+  constructor(private formBuilder: FormBuilder, private tokenService: TokenService, private authService: AuthService) { 
+    //Creamos el grupo de controles para el formulario 
+    this.form= this.formBuilder.group({
+      nombreUsuario:['',[Validators.required]],      
+      password:['', [Validators.required]],
+      
+   })
+  }
 
   ngOnInit(): void {
     if(this.tokenService.getToken()){
@@ -27,6 +36,23 @@ export class ModalLoginComponent implements OnInit {
       this.roles = this.tokenService.getAuthorities();
     }
   }
+
+  get Nombre(){
+    return this.form.get("nombreUsuario");
+  }
+
+  get Password(){
+    return this.form.get("password");
+  }
+
+  get NombreValid(){
+    return this.Nombre.touched && !this.Nombre.valid;
+  }
+
+  get PasswordValid() {
+    return this.Password.touched && !this.Password.valid;
+  }
+
 
   onLogin(): void{
     this.loginUsuario = new LoginUsuario(this.nombreUsuario, this.password); 
@@ -45,4 +71,9 @@ export class ModalLoginComponent implements OnInit {
       console.log(this.errMsj);
     })
   }
+
+  limpiar(): void{
+    this.form.reset();
+  }
+
 }

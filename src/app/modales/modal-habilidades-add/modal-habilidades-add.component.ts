@@ -10,20 +10,19 @@ import { HabilidadService } from 'src/app/services/habilidad.service';
 })
 export class ModalHabilidadesAddComponent implements OnInit {
   form: FormGroup;
-  habilidad : '';
-  porcentaje : 0;
 
   constructor(private formBuilder: FormBuilder, private sHabilidad:HabilidadService) { 
 
-///Creamos el grupo de controles para el formulario 
+//Creamos el grupo de controles para el formulario 
 this.form= this.formBuilder.group({
   habilidad:['',[Validators.required]],  
   porcentaje:['', [Validators.required, Validators.min(0), Validators.max(100)]],  
+  personaid:[1],
 })
 }
   ngOnInit(): void {
   }
-  //declarar para las validaciones
+  //declarar para los campos
   get Habilidad(){
     return this.form.get("habilidad");
   }
@@ -31,27 +30,27 @@ this.form= this.formBuilder.group({
   get Porcentaje(){
     return this.form.get("porcentaje");
   }
- //Validaciones
-  get HabilidadValid(){
-    return this.Habilidad.touched && !this.Habilidad.valid;
-  }
 
-  get PorcentajeValid() {
-    return this.Porcentaje.touched && !this.Porcentaje.valid;
-  }
+ 
 
   onCreate(): void{
-    const habi = new Habilidad(this.habilidad, this.porcentaje);
-      this.sHabilidad.save(habi).subscribe(data=>{
+      this.sHabilidad.save(this.form.value).subscribe(data=>{
       alert("Habilidad Añadida");
       window.location.reload();
-    }, err =>{
-      alert("falló en la carga, intente nuevamente");
-      this.form.reset();
     });
   }
 
   limpiar(): void{
     this.form.reset();
+  }
+
+  onEnviar(event:Event){
+    event.preventDefault;
+    if (this.form.valid){
+      this.onCreate();
+    }else{
+      alert("falló en la carga, intente nuevamente");
+      this.form.markAllAsTouched();
+    }
   }
 }

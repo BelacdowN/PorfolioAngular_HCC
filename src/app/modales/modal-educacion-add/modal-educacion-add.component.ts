@@ -9,24 +9,18 @@ import { EstudioService } from 'src/app/services/estudio.service';
   styleUrls: ['./modal-educacion-add.component.css']
 })
 export class ModalEducacionAddComponent implements OnInit {
-  form: FormGroup;
-  estudio : '';
-  inicio : '';
-  fin : '';
-  descripcion : '';
-  imagen : '';
-  url : '';
-  institucion : '';
+  form:FormGroup;
   constructor(private formBuilder: FormBuilder, private sEstudio: EstudioService) { 
-    ///Creamos el grupo de controles para el formulario 
-    this.form= this.formBuilder.group({
+    //Creamos el grupo de controles para el formulario 
+    this.form=this.formBuilder.group({
       estudio:['',[Validators.required]],
       inicio:[''],
       fin:[''],
-      descripcion:['', [Validators.required]],
+      descripcion:['',[Validators.required]],
       imagen:[''],
       url:[''],
       institucion:[''],
+      personaid:[1],
    })
   }
 
@@ -41,24 +35,12 @@ export class ModalEducacionAddComponent implements OnInit {
     return this.form.get("descripcion");
   }
  
-
-
-  get EstudioValid(){
-    return this.Estudio.touched && !this.Estudio.valid;
-  }
-
-  get DescripcionValid() {
-    return this.Descripcion.touched && !this.Descripcion.valid;
-  }
+  
 
   onCreate(): void{
-    const estu = new Estudio(this.estudio, this.inicio, this.fin, this.descripcion, this.imagen, this.url, this.institucion);
-      this.sEstudio.save(estu).subscribe(data=>{
+      this.sEstudio.save(this.form.value).subscribe(data=>{
       alert("Estudio Añadido");
       window.location.reload();
-    }, err =>{
-      alert("falló en la carga, intente nuevamente");
-      this.form.reset();
     });
   }
 
@@ -66,4 +48,13 @@ export class ModalEducacionAddComponent implements OnInit {
     this.form.reset();
   }
 
+  onEnviar(event:Event){
+    event.preventDefault;
+    if (this.form.valid){
+      this.onCreate();
+    }else{
+      alert("falló en la carga, intente nuevamente");
+      this.form.markAllAsTouched();
+    }
+  }
 }

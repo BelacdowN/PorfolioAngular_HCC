@@ -9,10 +9,9 @@ import { TokenService } from 'src/app/services/token.service';
   styleUrls: ['./educacion.component.css']
 })
 export class EducacionComponent implements OnInit {
-  isLogged = false;
+  isLogged:boolean=false;
   estudios: Estudio[]=[]; //se llama al modelo que es un array
-  idEditar : number;
-  isTrue = false;
+  
   constructor(private tokenService: TokenService, private sEstudio:EstudioService) { }
 
   ngOnInit(): void {
@@ -28,16 +27,11 @@ export class EducacionComponent implements OnInit {
     this.sEstudio.lista().subscribe(data => {this.estudios=data});
   }
 
-  idEdit(id:number){
-    this.isTrue = true;
-    this.idEditar = id;
-  }
-
   delete(id:number){
     if(id != undefined){
       this.sEstudio.delete(id).subscribe(
         data =>{
-          // alert("Estudio Eliminada correctamente")
+          alert("Estudio eliminado correctamente")
           this.cargarEstudio();
         }, err =>{
           alert("no se pudo eliminar la educacion")

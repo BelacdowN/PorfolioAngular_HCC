@@ -7,11 +7,11 @@
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" (click)="limpiar()"></button>
         </div>
         <!-- formulario de habilidad-->
-        <form [formGroup]="form" (ngSubmit)="form.valid && onCreate()" name="habilidadesForm"> 
+        <form [formGroup]="form" (ngSubmit)="onEnviar($event)" name="habilidadesForm"> 
         <div class="modal-body">
                 <div class="mb-3">
                   <label for="habilidadNombre" class="form-label">Agregar Habilidad</label>
-                  <input type="text" class="form-control" id="habilidadNombre" placeholder="Nombre nuevo" formControlName="habilidad" [(ngModel)]="habilidad" [ngClass]="{'is-invalid': Habilidad.errors && Habilidad.touched, 'is-valid': !Habilidad.errors && Habilidad.touched}">
+                  <input type="text" class="form-control" id="habilidadNombre" placeholder="Nombre nuevo" formControlName="habilidad" [ngClass]="{'is-invalid': Habilidad.errors && Habilidad.touched, 'is-valid': !Habilidad.errors && Habilidad.touched}">
                   <div *ngIf="Habilidad.errors && Habilidad.touched">    
                     <p *ngIf="Habilidad.hasError('required')" class="text-danger">
                       La habilidad es requerida.
@@ -21,7 +21,7 @@
 
                 <div>
                   <label for="habilidadPorcentaje" class="form-label">Agregar Porcentaje de Manejo (Escala 0-100)</label>
-                  <input type="number" min="0" max="100" id="habilidadPorcentaje" formControlName="porcentaje" [(ngModel)]="porcentaje" [ngClass]="{'is-invalid': Porcentaje.errors && Porcentaje.touched, 'is-valid': !Porcentaje.errors && Porcentaje.touched}">
+                  <input type="number" min="0" max="100" id="habilidadPorcentaje" formControlName="porcentaje" [ngClass]="{'is-invalid': Porcentaje.errors && Porcentaje.touched, 'is-valid': !Porcentaje.errors && Porcentaje.touched}">
                   <div *ngIf="Porcentaje.errors && Porcentaje.touched">    
                     <p *ngIf="Porcentaje.hasError('required')" class="text-danger">
                       El porcentaje es requerido.
@@ -34,6 +34,9 @@
                     </p>
 
                   </div>
+                </div>
+                <div >
+                  <input type="hidden" formControlName="personaid">
                 </div>
               </div>
                 <div class="modal-footer">

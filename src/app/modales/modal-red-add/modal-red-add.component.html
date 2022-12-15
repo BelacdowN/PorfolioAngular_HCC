@@ -1,0 +1,56 @@
+ <!-- Modal Redes -->
+ <div class="modal fade" id="RedesModalAdd" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Agregar Red</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" (click)="limpiar()"></button>
+        </div>
+        <!-- formulario de Red-->
+        <form [formGroup]="form" (ngSubmit)="onEnviar($event)" name="RedesForm"> 
+        <div class="modal-body">
+                
+                <div class="mb-3">
+                  <label for="RedNombre" class="form-label">Agregar Nombre</label>
+                  <input type="text" class="form-control" id="RedNombre" placeholder="Nombre nuevo" formControlName="nombre" [ngClass]="{'is-invalid': Nombre.errors && Nombre.touched, 'is-valid': !Nombre.errors && Nombre.touched}">
+                  <div *ngIf="Nombre.errors && Nombre.touched">    
+                    <p *ngIf="Nombre.hasError('required')" class="text-danger">
+                      El nombre es requerido.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="mb-3">
+                    <label for="RedUrl" class="form-label">Agregar Url</label>
+                    <input type="text" class="form-control" id="RedUrl" placeholder="Url nueva" formControlName="url" [ngClass]="{'is-invalid': Url.errors && Url.touched, 'is-valid': !Url.errors && Url.touched}">
+                    <div *ngIf="Url.errors && Url.touched">    
+                      <p *ngIf="Url.hasError('required')" class="text-danger">
+                        La URL es requerida.
+                      </p>
+                    </div>
+                  </div>
+               
+
+                  <div class="mb-3">
+                    <label for="RedIcono" class="form-label">Agregar Url</label>
+                    <input type="text" class="form-control" id="RedIcono" placeholder="Ej: fa-regular fa-hat-santa" formControlName="icono" [ngClass]="{'is-invalid': Icono.errors && Icono.touched, 'is-valid': !Icono.errors && Icono.touched}">
+                    <div *ngIf="Icono.errors && Icono.touched">    
+                      <p *ngIf="Icono.hasError('required')" class="text-danger">
+                        El icono es requerido.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div >
+                    <input type="hidden" formControlName="personaid">
+                  </div>
+
+              </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-ligth" (click)="limpiar()">Limpiar</button>
+                  <button type="submit" class="btn btnLogin">Agregar</button>
+                </div>
+              </form>
+            </div>
+    </div>
+  </div>

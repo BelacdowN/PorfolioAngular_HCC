@@ -9,8 +9,8 @@ import { TokenService } from 'src/app/services/token.service';
   styleUrls: ['./sobremi.component.css']
 })
 export class SobremiComponent implements OnInit {
-  persona: persona = null;
-  isLogged = false;
+  persona:persona=null;
+  isLogged:boolean=false;
   constructor(public personaService: PersonaService, private tokenService: TokenService) { }
 
   ngOnInit(): void {

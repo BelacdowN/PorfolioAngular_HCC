@@ -1,5 +1,6 @@
-import { Component, OnChanges, OnInit } from '@angular/core';
-import { ExperienciaComponent } from 'src/app/components/experiencia/experiencia.component';
+import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Experiencia } from 'src/app/model/experiencia';
 import { ExperienciaService } from 'src/app/services/experiencia.service';
 
@@ -9,37 +10,68 @@ import { ExperienciaService } from 'src/app/services/experiencia.service';
   styleUrls: ['./modal-experiencia.component.css']
 })
 export class ModalExperienciaComponent implements OnInit{
-  id: number ;
+  form:FormGroup;
   experiencia :Experiencia = null;
-  constructor(private sExperiencia: ExperienciaService,
-              private insert: ExperienciaComponent
-    ) { }
+  constructor(private formBuilder: FormBuilder,
+              private sExperiencia: ExperienciaService,
+              private activatedRoute:ActivatedRoute,
+              private router:Router
+    ) { 
+      //Creamos el grupo de controles para el formulario 
+    this.form= this.formBuilder.group({
+      id:[''],
+      puesto:['',[Validators.required]],
+      inicio:[''],
+      fin:[''],
+      descripcion:['', [Validators.required]],
+      imagen:[''],
+      url:[''],
+      empresa:[''],
+      esTrabajoActual:[''],
+      personaid:1,
+   })
+    }
   
   
   ngOnInit(): void {
-   this.info()
+    const id = this.activatedRoute.snapshot.params['id'];
+    this.sExperiencia.detail(id).subscribe(data => {
+      this.experiencia=data;
+    },err =>{
+      alert("Error al cargar datos");
+      this.router.navigate(['']);
+    }
+    )
   }
 
-info():void{
-  this.id = this.insert.idEditar;
-  this.sExperiencia.detail(this.id).subscribe(data => 
-    {this.experiencia=data},
-    err =>{
-      alert("Error al llamar los datos de experiencia");
-    });
-}
+  get Puesto(){
+    return this.form.get("puesto");
+  }
 
-  onUpdate(): void{    
-    this.sExperiencia.update(this.experiencia.id, this.experiencia).subscribe(
-      data=>{alert("Experiencia Modificada")
-    window.location.reload();      
-    },err =>{
-            alert("falló al modificar, intente nuevamente");
-      window.location.reload();
-    }
-    )}
+  get Descripcion(){
+    return this.form.get("descripcion");
+  }
+ 
+  
 
-    cerrar(): void{
-      window.location.reload();
+
+  onUpdate():void{
+    this.sExperiencia.edit(this.form.value).subscribe(data => {
+      alert("Experiencia modificada.");
+      this.router.navigate(['']);
     }
+    )
+  }
+
+  onEnviar(event:Event){
+    event.preventDefault;
+    if (this.form.valid){
+      this.onUpdate();
+    }else{
+      alert("falló en la carga, intente nuevamente");
+      this.form.markAllAsTouched();
+    }
+  }
+  
+
 }

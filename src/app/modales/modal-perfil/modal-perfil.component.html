@@ -1,31 +1,58 @@
-  <!-- Modal Perfil -->
-  <div class="modal fade" id="profileModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
+<!-- Formulario edit Perfil -->
+<form [formGroup]="form" (ngSubmit)="onEnviar($event)" name="perfilForm" class="bg-white rounded p-5 seccion"> 
       <div class="modal-content">
         <div class="modal-header">
           <h5 class="modal-title" id="exampleModalLabel">Editar Perfil</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" routerLink="/"></button>
         </div>
-        <div class="modal-body">
-            <form name="perfilForm"> 
+              <div class="modal-body">
                 <!-- formulario de perfil-->
+                <input type="hidden" formControlName="id" [ngModel]="perso.id">
                 <div class="mb-3">
-                  <label for="perfilImg" class="form-label">Modificar imagen de perfil</label>
-                  <input class="form-control" type="file" id="perfilImg">
+                  <label for="perfilImg" class="form-label">Modificar imagen de perfil<span class="text-danger">*</span></label>
+                  <input class="form-control" type="url" formControlName="img" id="perfilImg" [ngModel]="perso.img" [ngClass]="{'is-invalid': Img.errors && Img.touched, 'is-valid': !Img.errors && Img.touched}">
+                  <div *ngIf="Img.errors && Img.touched" class="invalid-feedback">
+                    <div *ngIf="Img.errors['required']">La imagen de perfil es requerido</div>
+                  </div>
                 </div>
                 <div class="mb-3">
-                  <label for="perfilNombre" class="form-label">Modificar Nombre</label>
-                  <input type="text" class="form-control" id="perfilNombre" placeholder="Nombre nuevo">
+                  <label for="perfilBanner" class="form-label">Modificar imagen de banner<span class="text-danger">*</span></label>
+                  <input class="form-control" type="url" formControlName="banner" id="perfilBanner" [ngModel]="perso.banner" [ngClass]="{'is-invalid': Banner.errors && Banner.touched, 'is-valid': !Banner.errors && Banner.touched}">
+                  <div *ngIf="Banner.errors && Banner.touched" class="invalid-feedback">
+                    <div *ngIf="Banner.errors['required']">El banner es requerido</div>
+                  </div>
                 </div>
                 <div class="mb-3">
-                  <label for="perfilTitulo" class="form-label">Modificar Titulo</label>
-                  <input type="text" class="form-control" id="perfilTitulo" placeholder="Título nuevo">
+                  <label for="perfilNombre" class="form-label">Modificar Nombre<span class="text-danger">*</span></label>
+                  <input type="text" class="form-control" id="perfilNombre" formControlName="nombre" placeholder="Nombre nuevo" [ngModel]="perso.nombre" [ngClass]="{'is-invalid': Nombre.errors && Nombre.touched, 'is-valid': !Nombre.errors && Nombre.touched}">
+                  <div *ngIf="Nombre.errors && Nombre.touched" class="invalid-feedback">
+                    <div *ngIf="Nombre.errors['required']">El nombre es requerido</div>
+                  </div>
                 </div>
-            </form>
-        </div>
-        <div class="modal-footer">
-            <button type="button" class="btn btnLogin">Guardar</button>
-        </div>
-      </div>
-    </div>
-</div>
+                <div class="mb-3">
+                  <label for="perfilApellido" class="form-label">Modificar Apellido<span class="text-danger">*</span></label>
+                  <input type="text" class="form-control" id="perfilApellido" formControlName="apellido" placeholder="Apellido nuevo" [ngModel]="perso.apellido" [ngClass]="{'is-invalid': Apellido.errors && Apellido.touched, 'is-valid': !Apellido.errors && Apellido.touched}">
+                  <div *ngIf="Apellido.errors && Apellido.touched" class="invalid-feedback">
+                    <div *ngIf="Apellido.errors['required']">El nombre es requerido</div>
+                  </div>
+                </div>
+                <div class="mb-3">
+                  <label for="perfilTitulo" class="form-label">Modificar Titulo<span class="text-danger">*</span></label>
+                  <input type="text" class="form-control" id="perfilTitulo" formControlName="titulo" placeholder="Título nuevo" [ngModel]="perso.titulo" [ngClass]="{'is-invalid': Titulo.errors && Titulo.touched, 'is-valid': !Titulo.errors && Titulo.touched}">
+                  <div *ngIf="Titulo.errors && Titulo.touched" class="invalid-feedback">
+                    <div *ngIf="Titulo.errors['required']">El nombre es requerido</div>
+                  </div>
+                </div>
+                <div class="mb-3">
+                  <label for="perfilSobreMi" class="form-label">Modificar Sobre Mi<span class="text-danger">*</span></label>
+                  <textarea type="text" class="form-control" formControlName="sobreMi"  id="perfilSobreMi" [ngModel]="perso.sobreMi" [ngClass]="{'is-invalid': SobreMi.errors && SobreMi.touched, 'is-valid': !SobreMi.errors && SobreMi.touched}"></textarea>
+                  <div *ngIf="SobreMi.errors && SobreMi.touched" class="invalid-feedback">
+                    <div *ngIf="SobreMi.errors['required']">La descripción es requerida</div>
+                  </div>
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button type="submit" class="btn btnLogin">Guardar</button>
+              </div>
+            </div>  
+        </form>

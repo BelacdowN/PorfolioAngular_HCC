@@ -33,7 +33,7 @@ export class HabilidadesComponent implements OnInit {
     if(id != undefined){
       this.sHabilidad.delete(id).subscribe(
         data =>{
-          // alert("Estudio Eliminada correctamente")
+          alert("Habilidad eliminada correctamente")
           this.cargarHabilidad();
         }, err =>{
           alert("no se pudo eliminar la habilidad");

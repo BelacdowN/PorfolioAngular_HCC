@@ -6,27 +6,35 @@
                   <h5 class="modal-title text-white" id="exampleModalLabel">Login</h5>
                   <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <div class="modal-body">
-                    <form #f="ngForm" (ngSubmit)="onLogin()" novalidate name="loginForm"> 
-                        <!-- formulario de login-->
+                <form [formGroup]="form" (ngSubmit)="onLogin()" novalidate name="loginForm"> 
+                  <!-- formulario de login-->
+                  <div class="modal-body">
                         <div class="mb-3">
                           <label for="nombreUsuario" class="form-label">Usuario</label>
-                          <input type="text" class="form-control" id="nombreUsuario" name="nombreUsuario" aria-describedby="Usuario" required [(ngModel)]="nombreUsuario">
-                          <div id="emailHelp" class="form-text">Ingrese su usuario</div>
+                          <input type="text" class="form-control" id="nombreUsuario" formControlName="nombreUsuario" aria-describedby="Usuario" required [(ngModel)]="nombreUsuario" placeholder="Ingrese su usuario" [ngClass]="{'is-invalid': Nombre.errors && Nombre.touched, 'is-valid': !Nombre.errors && Nombre.touched}">
+                          <div *ngIf="Nombre.errors && Nombre.touched">    
+                            <p *ngIf="Nombre.hasError('required')" class="text-danger">
+                              El usuario es requerido.
+                            </p>
+                          </div>
                         </div>
                         <div class="mb-3">
                           <label for="password" class="form-label">Contraseña</label>
-                          <input type="password" class="form-control" id="password" name="password" required [(ngModel)]="password">
-                          <div id="passwordHelp" class="form-text">Ingrese su contraseña</div>
+                          <input type="password" class="form-control" id="password" formControlName="password" required [(ngModel)]="password"
+                          placeholder="Ingrese su contraseña" [ngClass]="{'is-invalid': Password.errors && Password.touched, 'is-valid': !Password.errors && Password.touched}">
+                          <div *ngIf="Password.errors && Password.touched">    
+                            <p *ngIf="Password.hasError('required')" class="text-danger">
+                              La contraseña es requerida.
+                            </p>
+                          </div>
                         </div>
+                      </div>
                         <div class="modal-footer">
+                          <button type="button" class="btn btn-ligth" (click)="limpiar()">Limpiar</button>
                           <button type="submit" class="btn btnLogin text-white" data-bs-dismiss="modal">Iniciar Sesión</button>
-                        </div>
-
-                        
+                        </div>                     
 
                       </form>
-                  </div>
               </div>
             </div>
           </div>

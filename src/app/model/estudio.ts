@@ -8,8 +8,9 @@ export class Estudio {
     imagen : string;
     url : string;
     institucion : string;
+    personaid : number;
 
-    constructor(estudio:string, inicio: string, fin: string, descripcion:string, imagen:string, url:string, institucion:string) {
+    constructor(estudio:string, inicio: string, fin: string, descripcion:string, imagen:string, url:string, institucion:string, personaid : number) {
         this.estudio = estudio;
         this.inicio = inicio;
         this.fin = fin;
@@ -17,5 +18,6 @@ export class Estudio {
         this.imagen = imagen;
         this.url = url;
         this.institucion = institucion;
+        this.personaid = personaid;
     }
 }

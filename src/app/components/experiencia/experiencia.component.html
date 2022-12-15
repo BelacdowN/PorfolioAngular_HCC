@@ -21,15 +21,12 @@
           <h4>{{experiencia.descripcion}}</h4>
         </div>
         <div class="col-1">
-          <button type="button" class="btn btn-close-white" data-bs-toggle="modal"  data-bs-target="#experienciaModalEd" *ngIf="isLogged" (click)="idEdit(experiencia.id)"><i class="fa-solid fa-pencil"></i></button>
+          <button type="button" class="btn btn-close-white" data-bs-toggle="modal"  data-bs-target="#experienciaModalEd" *ngIf="isLogged" ><i class="fa-solid fa-pencil" routerLink="/editExperiencia/{{experiencia.id}}" ></i></button>
           <button type="submit" class="btn btn-close-white" *ngIf="isLogged" (click)="delete(experiencia.id)"><i class="fa-solid fa-trash-can"></i></button>
         </div>
         <br><hr class="col-11">      
       </div>
     </div>
-  </section>  
-  <div *ngIf="isTrue"> 
-    <app-modal-experiencia></app-modal-experiencia>
-  </div>
+  </section>    
 <app-modal-experiencia-add></app-modal-experiencia-add>
 

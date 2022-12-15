@@ -23,7 +23,7 @@
           </div>
           <div class="col-2 p-0 d-flex item-alling-end">
             <!-- Button trigger modal --> 
-            <button type="button" *ngIf="isLogged" data-bs-toggle="modal" data-bs-target="#habilidadesModal" class="btn btn-close-white"><i class="fa-solid fa-pencil"></i></button>
+            <button type="button" *ngIf="isLogged" class="btn btn-close-white" routerLink="editHabilidad/{{habilidad.id}}"><i class="fa-solid fa-pencil" ></i></button>
             <button type="submit" *ngIf="isLogged" class="btn btn-close-white"><i class="fa-solid fa-trash-can" (click)="delete(habilidad.id)"></i></button>
           </div>
         </div>       
@@ -31,5 +31,4 @@
 
 </div>
 </section>  
-<app-modal-habilidades></app-modal-habilidades>
 <app-modal-habilidades-add></app-modal-habilidades-add>
