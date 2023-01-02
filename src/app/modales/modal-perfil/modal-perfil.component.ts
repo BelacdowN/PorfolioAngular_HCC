@@ -11,7 +11,7 @@ import { PersonaService } from 'src/app/services/persona.service';
 })
 export class ModalPerfilComponent implements OnInit {
   form:FormGroup;
-  perso:persona=null;
+  perso:persona;
   constructor(private formBuilder: FormBuilder,
               private sPersona:PersonaService,
               private activatedRoute:ActivatedRoute,

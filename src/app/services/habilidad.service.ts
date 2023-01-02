@@ -7,7 +7,7 @@ import { Habilidad } from '../model/habilidad';
   providedIn: 'root'
 })
 export class HabilidadService {
-  url= 'http://localhost:8080/habilidad/'
+  url: string= "/servidor/habilidad/";
   constructor(private httpClient:HttpClient) { }
 
   public lista(): Observable<Habilidad[]>{

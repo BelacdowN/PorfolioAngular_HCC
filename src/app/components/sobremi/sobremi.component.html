@@ -9,20 +9,20 @@
       <a href="#footer"><button class="btn btn-dark">Contacto</button></a>     
     </div>
       
-      <img [src]="persona.banner" alt="banner" width="100%" height="auto" class="rounded-top banner">
+      <img [src]="persona?.banner" alt="banner" width="100%" height="auto" class="rounded-top banner">
       
       
       <div class="row p-3">
       <div class="col-3">
-        <img [src]="persona.img" class="rounded-circle profileImage w-50" alt="profileImage"> 
+        <img [src]="persona?.img" class="rounded-circle profileImage w-50" alt="profileImage"> 
        <!-- Button trigger modal -->  
-        <button type="button" *ngIf="isLogged" routerLink="editPerfil/{{persona.id}}" class="btn btn-close-white" ><i class="fa-solid fa-pencil"></i></button>
+        <button type="button" *ngIf="isLogged" routerLink="editPerfil/{{persona?.id}}" class="btn btn-close-white" ><i class="fa-solid fa-pencil"></i></button>
         <br>
-        <h4 class="nombrePerfil">{{persona.nombre}} {{persona.apellido}}</h4>
-        <h5 class="tituloPerfil">{{persona.titulo}}</h5>
+        <h4 class="nombrePerfil">{{persona?.nombre}} {{persona?.apellido}}</h4>
+        <h5 class="tituloPerfil">{{persona?.titulo}}</h5>
       </div>
       <div class="col-8 text-md-start">
-        <h4 class="sobreMiPerfil">{{persona.sobreMi}}</h4>
+        <h4 class="sobreMiPerfil">{{persona?.sobreMi}}</h4>
       </div>
       <div class="col-1 p-0">        
       </div>

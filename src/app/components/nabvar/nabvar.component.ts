@@ -23,7 +23,7 @@ export class NabvarComponent implements OnInit {
   }
 
   cargarHabilidad():void{
-    this.sRed.listaPer(1).subscribe(data => {
+    this.sRed.lista().subscribe(data => {
       this.redes=data});
   }
 

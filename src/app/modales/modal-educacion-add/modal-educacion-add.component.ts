@@ -51,6 +51,7 @@ export class ModalEducacionAddComponent implements OnInit {
   onEnviar(event:Event){
     event.preventDefault;
     if (this.form.valid){
+      //metodos
       this.onCreate();
     }else{
       alert("falló en la carga, intente nuevamente");

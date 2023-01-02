@@ -9,7 +9,7 @@ import { NuevoUsuario } from '../model/nuevo-usuario';
   providedIn: 'root'
 })
 export class AuthService {
-  authUrl = 'http://localhost:8080/auth/';
+  authUrl:string = "https://portfolio-belacdown.koyeb.app/auth/";
 
   constructor(private httpClient: HttpClient) { }
 

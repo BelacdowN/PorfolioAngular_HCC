@@ -7,7 +7,7 @@ import { Estudio } from '../model/estudio';
   providedIn: 'root'
 })
 export class EstudioService {
-  url= 'http://localhost:8080/estudio/'
+  url:string= "/servidor/estudio/";
   constructor(private httpClient:HttpClient) { }
 
     public lista(): Observable<Estudio[]>{
