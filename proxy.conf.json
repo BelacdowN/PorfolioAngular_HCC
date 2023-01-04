@@ -1,7 +1,8 @@
 {
     "/servidor/*": {
       "target": "https://portfolio-belacdown.koyeb.app",
-      "secure": false,    
-    "changeOrigin":true
+      "secure": true,  
+      "logLevel":"debug",  
+      "changeOrigin":true
     }
   }

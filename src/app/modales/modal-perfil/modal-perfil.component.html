@@ -10,42 +10,42 @@
                 <input type="hidden" formControlName="id" [ngModel]="perso.id">
                 <div class="mb-3">
                   <label for="perfilImg" class="form-label">Modificar imagen de perfil<span class="text-danger">*</span></label>
-                  <input class="form-control" type="url" formControlName="img" id="perfilImg" [ngModel]="perso.img" [ngClass]="{'is-invalid': Img.errors && Img.touched, 'is-valid': !Img.errors && Img.touched}">
+                  <input class="form-control" type="url" formControlName="img"  [ngModel]="perso.img" [ngClass]="{'is-invalid': Img.errors && Img.touched, 'is-valid': !Img.errors && Img.touched}">
                   <div *ngIf="Img.errors && Img.touched" class="invalid-feedback">
                     <div *ngIf="Img.errors['required']">La imagen de perfil es requerido</div>
                   </div>
                 </div>
                 <div class="mb-3">
                   <label for="perfilBanner" class="form-label">Modificar imagen de banner<span class="text-danger">*</span></label>
-                  <input class="form-control" type="url" formControlName="banner" id="perfilBanner" [ngModel]="perso.banner" [ngClass]="{'is-invalid': Banner.errors && Banner.touched, 'is-valid': !Banner.errors && Banner.touched}">
+                  <input class="form-control" type="url" formControlName="banner"  [ngModel]="perso.banner" [ngClass]="{'is-invalid': Banner.errors && Banner.touched, 'is-valid': !Banner.errors && Banner.touched}">
                   <div *ngIf="Banner.errors && Banner.touched" class="invalid-feedback">
                     <div *ngIf="Banner.errors['required']">El banner es requerido</div>
                   </div>
                 </div>
                 <div class="mb-3">
                   <label for="perfilNombre" class="form-label">Modificar Nombre<span class="text-danger">*</span></label>
-                  <input type="text" class="form-control" id="perfilNombre" formControlName="nombre" placeholder="Nombre nuevo" [ngModel]="perso.nombre" [ngClass]="{'is-invalid': Nombre.errors && Nombre.touched, 'is-valid': !Nombre.errors && Nombre.touched}">
+                  <input type="text" class="form-control" formControlName="nombre" placeholder="Nombre nuevo" [ngModel]="perso.nombre" [ngClass]="{'is-invalid': Nombre.errors && Nombre.touched, 'is-valid': !Nombre.errors && Nombre.touched}">
                   <div *ngIf="Nombre.errors && Nombre.touched" class="invalid-feedback">
                     <div *ngIf="Nombre.errors['required']">El nombre es requerido</div>
                   </div>
                 </div>
                 <div class="mb-3">
                   <label for="perfilApellido" class="form-label">Modificar Apellido<span class="text-danger">*</span></label>
-                  <input type="text" class="form-control" id="perfilApellido" formControlName="apellido" placeholder="Apellido nuevo" [ngModel]="perso.apellido" [ngClass]="{'is-invalid': Apellido.errors && Apellido.touched, 'is-valid': !Apellido.errors && Apellido.touched}">
+                  <input type="text" class="form-control"  formControlName="apellido" placeholder="Apellido nuevo" [ngModel]="perso.apellido" [ngClass]="{'is-invalid': Apellido.errors && Apellido.touched, 'is-valid': !Apellido.errors && Apellido.touched}">
                   <div *ngIf="Apellido.errors && Apellido.touched" class="invalid-feedback">
                     <div *ngIf="Apellido.errors['required']">El nombre es requerido</div>
                   </div>
                 </div>
                 <div class="mb-3">
                   <label for="perfilTitulo" class="form-label">Modificar Titulo<span class="text-danger">*</span></label>
-                  <input type="text" class="form-control" id="perfilTitulo" formControlName="titulo" placeholder="Título nuevo" [ngModel]="perso.titulo" [ngClass]="{'is-invalid': Titulo.errors && Titulo.touched, 'is-valid': !Titulo.errors && Titulo.touched}">
+                  <input type="text" class="form-control"  formControlName="titulo" placeholder="Título nuevo" [ngModel]="perso.titulo" [ngClass]="{'is-invalid': Titulo.errors && Titulo.touched, 'is-valid': !Titulo.errors && Titulo.touched}">
                   <div *ngIf="Titulo.errors && Titulo.touched" class="invalid-feedback">
                     <div *ngIf="Titulo.errors['required']">El nombre es requerido</div>
                   </div>
                 </div>
                 <div class="mb-3">
                   <label for="perfilSobreMi" class="form-label">Modificar Sobre Mi<span class="text-danger">*</span></label>
-                  <textarea type="text" class="form-control" formControlName="sobreMi"  id="perfilSobreMi" [ngModel]="perso.sobreMi" [ngClass]="{'is-invalid': SobreMi.errors && SobreMi.touched, 'is-valid': !SobreMi.errors && SobreMi.touched}"></textarea>
+                  <textarea type="text" class="form-control" formControlName="sobreMi"   [ngModel]="perso.sobreMi" [ngClass]="{'is-invalid': SobreMi.errors && SobreMi.touched, 'is-valid': !SobreMi.errors && SobreMi.touched}"></textarea>
                   <div *ngIf="SobreMi.errors && SobreMi.touched" class="invalid-feedback">
                     <div *ngIf="SobreMi.errors['required']">La descripción es requerida</div>
                   </div>

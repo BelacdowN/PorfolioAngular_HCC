@@ -11,34 +11,34 @@
         <div class="modal-body">
                 <div class="mb-3">
                   <label for="imagen" class="form-label">Agregar Logo de Empresa</label>
-                  <input class="form-control" type="url" id="imagen" name="imagen" formControlName="imagen" placeholder="Ingrese URL">
+                  <input class="form-control" type="url"  formControlName="imagen" placeholder="Ingrese URL">
                 </div>
                 <div class="mb-3">
                   <label for="empresa" class="form-label">Agregar Empresa</label>
-                  <input type="text" class="form-control" id="empresa" name="empresa" formControlName="empresa" placeholder="Empresa nueva">
+                  <input type="text" class="form-control"  formControlName="empresa" placeholder="Empresa nueva">
                 </div>
                 <div class="mb-3">
                   <label for="url" class="form-label">Agregar URL de Empresa</label>
-                  <input type="url" class="form-control" id="url" name="url" formControlName="url" placeholder="Ingrese URL" >
+                  <input type="url" class="form-control"   formControlName="url" placeholder="Ingrese URL" >
                 </div>
                 <div class="mb-3">
                   <label for="puesto" class="form-label">Agregar Cargo</label>
-                  <input type="text" class="form-control" id="puesto" name="puesto"  placeholder="Ingrese cargo" formControlName="puesto" [ngClass]="{'is-invalid': Puesto.errors && Puesto.touched, 'is-valid': !Puesto.errors && Puesto.touched}">
+                  <input type="text" class="form-control"    placeholder="Ingrese cargo" formControlName="puesto" [ngClass]="{'is-invalid': Puesto.errors && Puesto.touched, 'is-valid': !Puesto.errors && Puesto.touched}">
                   <div *ngIf="Puesto.errors && Puesto.touched" class="invalid-feedback">
                     <div *ngIf="Puesto.errors['required']">El nombre es requerido</div>
                   </div>
                 </div>
                 <div class="mb-3">
                   <label for="inicio" class="form-label">Agregar Periodo Inicio</label>
-                  <input type="date" class="form-control" id="inicio" name="inicio"  formControlName="inicio">
+                  <input type="date" class="form-control"    formControlName="inicio">
                 </div>
                 <div class="mb-3">
                   <label for="fin" class="form-label">Agregar Periodo Fin</label>
-                  <input type="date" class="form-control" id="fin" name="fin" formControlName="fin"> 
+                  <input type="date" class="form-control"  formControlName="fin"> 
                 </div>
                 <div class="mb-3">
                     <label for="descripcion" class="form-label">Agregar Información de Cargo</label>
-                    <textarea class="form-control" id="descripcion" name="descripcion"  rows="3" formControlName="descripcion" [ngClass]="{'is-invalid': Descripcion.errors && Descripcion.touched, 'is-valid': !Descripcion.errors && Descripcion.touched}"></textarea>
+                    <textarea class="form-control"   rows="3" formControlName="descripcion" [ngClass]="{'is-invalid': Descripcion.errors && Descripcion.touched, 'is-valid': !Descripcion.errors && Descripcion.touched}"></textarea>
                     <div *ngIf="Descripcion.errors && Descripcion.touched">    
                       <p *ngIf="Descripcion.hasError('required')" class="text-danger">
                         La descripcion es requerida.
@@ -47,7 +47,7 @@
                 </div>
                 <div class="form-check form-switch">
                   <label class="form-check-label" for="esTrabajoActual">Es trabajo actual</label>
-                  <input class="form-check-input" type="checkbox" role="switch" id="esTrabajoActual" name="esTrabajoActual"  formControlName="esTrabajoActual">
+                  <input class="form-check-input" type="checkbox" role="switch"   formControlName="esTrabajoActual">
                 </div>
                 <div >
                   <input type="hidden" formControlName="personaid">

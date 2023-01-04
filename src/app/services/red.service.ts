@@ -7,7 +7,7 @@ import { Red } from '../model/red';
   providedIn: 'root'
 })
 export class RedService {
-  url:string= "/servidor/red/";
+  url:string= "https://portfolio-belacdown.koyeb.app/red/";
   constructor(private httpClient:HttpClient) { }
 
   public lista(): Observable<Red[]>{

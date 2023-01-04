@@ -7,19 +7,19 @@
         </div>
               <div class="modal-body">
                 <div >
-                  <input type="hidden" formControlName="id" [ngModel]="proye.id" id="">
+                  <input type="hidden" formControlName="id" [ngModel]="proye.id" >
                 </div>
                 <div class="mb-3">
                   <label for="proyectoImg" class="form-label">Modificar Imagen de Proyecto</label>
-                  <input class="form-control" type="url" id="educacionImg" placeholder="URL de imagen" formControlName="imagen" [ngModel]="proye.imagen">
+                  <input class="form-control" type="url"  placeholder="URL de imagen" formControlName="imagen" [ngModel]="proye.imagen">
                 </div>
                 <div class="mb-3">
                   <label for="educacionEstudio" class="form-label">Modificar Url</label>
-                  <input type="url" class="form-control" id="educacionEstudio" formControlName="url" placeholder="Ingrese URL" [ngModel]="proye.url">
+                  <input type="url" class="form-control"  formControlName="url" placeholder="Ingrese URL" [ngModel]="proye.url">
                 </div>
                 <div class="mb-3">
                   <label for="proyectoNombre" class="form-label">Modificar Nombre de Proyecto</label>
-                  <input type="text" class="form-control"  id="educacionEstudio" formControlName="proyecto" placeholder="Nombre nuevo" [ngModel]="proye.proyecto" [ngClass]="{'is-invalid': Proyecto.errors && Proyecto.touched, 'is-valid': !Proyecto.errors && Proyecto.touched}">
+                  <input type="text" class="form-control"   formControlName="proyecto" placeholder="Nombre nuevo" [ngModel]="proye.proyecto" [ngClass]="{'is-invalid': Proyecto.errors && Proyecto.touched, 'is-valid': !Proyecto.errors && Proyecto.touched}">
                       <div *ngIf="Proyecto.errors && Proyecto.touched">    
                         <p *ngIf="Proyecto.hasError('required')" class="text-danger">
                           El nombre del proyecto es requerido.
@@ -28,15 +28,15 @@
                 </div>
                 <div class="mb-3">
                   <label for="proyectoPeriodoInicio" class="form-label">Modificar Periodo Inicio</label>
-                  <input type="date" class="form-control" id="educacionPeriodo-inicio" formControlName="inicio" [ngModel]="proye.inicio">
+                  <input type="date" class="form-control"  formControlName="inicio" [ngModel]="proye.inicio">
                 </div>
                 <div class="mb-3">
                   <label for="proyectoPeriodoFin" class="form-label">Modificar Periodo Fin</label>
-                  <input type="date" class="form-control" id="educacionPeriodoFin" formControlName="fin" [ngModel]="proye.fin">
+                  <input type="date" class="form-control"  formControlName="fin" [ngModel]="proye.fin">
                 </div>
                 <div class="mb-3">
                     <label for="proyectoInfo" class="form-label">Modificar Información de Proyecto Realizado</label>
-                    <textarea class="form-control" id="educacionInfo" rows="3" formControlName="descripcion" [ngModel]="proye.descripcion" [ngClass]="{'is-invalid': Descripcion.errors && Descripcion.touched, 'is-valid': !Descripcion.errors && Descripcion.touched}"></textarea >
+                    <textarea class="form-control"  rows="3" formControlName="descripcion" [ngModel]="proye.descripcion" [ngClass]="{'is-invalid': Descripcion.errors && Descripcion.touched, 'is-valid': !Descripcion.errors && Descripcion.touched}"></textarea >
                       <div *ngIf="Descripcion.errors && Descripcion.touched">    
                         <p *ngIf="Descripcion.hasError('required')" class="text-danger">
                           La descripcion es requerida.
@@ -44,7 +44,7 @@
                       </div>
                 </div>
                 <div >
-                  <input type="hidden" formControlName="personaid" [ngModel]="proye.personaid" id="">
+                  <input type="hidden" formControlName="personaid" [ngModel]="proye.personaid" >
                 </div>
               </div>
               <div class="modal-footer">

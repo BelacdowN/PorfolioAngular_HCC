@@ -7,7 +7,7 @@ import { Experiencia } from '../model/experiencia';
   providedIn: 'root'
 })
 export class ExperienciaService {
-  url:string= "/servidor/experiencia/";
+  url:string= "https://portfolio-belacdown.koyeb.app/experiencia/";
 
   constructor(private httpClient:HttpClient) { }
 
