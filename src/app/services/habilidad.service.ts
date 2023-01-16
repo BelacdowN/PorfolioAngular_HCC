@@ -7,7 +7,7 @@ import { Habilidad } from '../model/habilidad';
   providedIn: 'root'
 })
 export class HabilidadService {
-  url: string= "https://portfolio-belacdown.koyeb.app/habilidad/";
+  url: string= "/servidor/habilidad/";
   constructor(private httpClient:HttpClient) { }
 
   public lista(): Observable<Habilidad[]>{

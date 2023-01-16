@@ -8,9 +8,9 @@ export class Estudio {
     imagen : string;
     url : string;
     institucion : string;
-    personaid : number;
+    personaid : string;
 
-    constructor(estudio:string, inicio: string, fin: string, descripcion:string, imagen:string, url:string, institucion:string, personaid : number) {
+    constructor(estudio:string, inicio: string, fin: string, descripcion:string, imagen:string, url:string, institucion:string, personaid : string) {
         this.estudio = estudio;
         this.inicio = inicio;
         this.fin = fin;

@@ -7,7 +7,7 @@ import { Proyecto } from '../model/proyecto';
   providedIn: 'root'
 })
 export class ProyectoService {
-  url:string= "https://portfolio-belacdown.koyeb.app/proyecto/";
+  url:string= "/servidor/proyecto/";
   constructor(private httpClient:HttpClient) { }
 
   public lista(): Observable<Proyecto[]>{

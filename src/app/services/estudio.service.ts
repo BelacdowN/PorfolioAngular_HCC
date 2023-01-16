@@ -7,7 +7,7 @@ import { Estudio } from '../model/estudio';
   providedIn: 'root'
 })
 export class EstudioService {
-  url:string= "https://portfolio-belacdown.koyeb.app/estudio/";
+  url:string= "/servidor/estudio/";
   constructor(private httpClient:HttpClient) { }
 
     public lista(): Observable<Estudio[]>{

@@ -12,7 +12,7 @@ import { ProyectoService } from 'src/app/services/proyecto.service';
 })
 export class ModalProyectosComponent implements OnInit {
   form:FormGroup;
-  proye :Proyecto = null;
+  proye :Proyecto;
   constructor(private formBuilder: FormBuilder, 
               private sProye:ProyectoService,
               private activatedRoute:ActivatedRoute,

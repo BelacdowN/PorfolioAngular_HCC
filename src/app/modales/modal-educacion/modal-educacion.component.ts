@@ -12,7 +12,7 @@ import { EstudioService } from 'src/app/services/estudio.service';
 })
 export class ModalEducacionComponent implements OnInit {
   form:FormGroup;
-  estu:Estudio=null;
+  estu:Estudio;
   constructor(private formBuilder: FormBuilder, 
               private sEstudio:EstudioService, 
               private activatedRoute:ActivatedRoute,

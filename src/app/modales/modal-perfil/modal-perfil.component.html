@@ -45,7 +45,7 @@
                 </div>
                 <div class="mb-3">
                   <label for="perfilSobreMi" class="form-label">Modificar Sobre Mi<span class="text-danger">*</span></label>
-                  <textarea type="text" class="form-control" formControlName="sobreMi"   [ngModel]="perso.sobreMi" [ngClass]="{'is-invalid': SobreMi.errors && SobreMi.touched, 'is-valid': !SobreMi.errors && SobreMi.touched}"></textarea>
+                  <textarea type="text" class="form-control" formControlName="sobreMi"  [ngModel]="perso.sobreMi" [ngClass]="{'is-invalid': SobreMi.errors && SobreMi.touched, 'is-valid': !SobreMi.errors && SobreMi.touched}"></textarea>
                   <div *ngIf="SobreMi.errors && SobreMi.touched" class="invalid-feedback">
                     <div *ngIf="SobreMi.errors['required']">La descripción es requerida</div>
                   </div>

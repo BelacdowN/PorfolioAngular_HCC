@@ -11,7 +11,7 @@ import { HabilidadService } from 'src/app/services/habilidad.service';
 })
 export class ModalHabilidadesComponent implements OnInit {
   form: FormGroup;
-  habi:Habilidad=null;
+  habi:Habilidad;
   constructor(private formBuilder: FormBuilder, 
     private sHabilidad:HabilidadService, 
     private activatedRoute:ActivatedRoute,

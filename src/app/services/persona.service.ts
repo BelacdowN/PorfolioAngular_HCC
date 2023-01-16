@@ -7,7 +7,7 @@ import { persona } from '../model/persona.model';
   providedIn: 'root'
 })
 export class PersonaService {
-  URL:string = "https://portfolio-belacdown.koyeb.app/persona/";
+  URL:string = "/servidor/persona/";
   constructor(private httpClient: HttpClient) { }
   
   public lista(): Observable<persona[]>{

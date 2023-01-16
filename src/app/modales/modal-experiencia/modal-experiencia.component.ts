@@ -11,7 +11,7 @@ import { ExperienciaService } from 'src/app/services/experiencia.service';
 })
 export class ModalExperienciaComponent implements OnInit{
   form:FormGroup;
-  experiencia :Experiencia = null;
+  experiencia :Experiencia;
   constructor(private formBuilder: FormBuilder,
               private sExperiencia: ExperienciaService,
               private activatedRoute:ActivatedRoute,
